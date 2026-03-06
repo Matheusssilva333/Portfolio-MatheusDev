@@ -32,13 +32,13 @@ const App: React.FC = () => {
           <div className="md:col-span-3">
             <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
               Matheus <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Desenvolvedor</span> <br />
-              <span className="text-slate-400 text-4xl md:text-5xl">Júnior</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Automações</span> <br />
+              <span className="text-slate-400 text-4xl md:text-5xl">Silva</span>
             </h1>
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-              Desenvolvedor freelancer especializado em <span className="text-cyan-400 font-semibold">IA e automações</span>.
-              Criando soluções inteligentes com <span className="text-cyan-400 font-semibold">Python</span>,
-              Java e Javascript para transformar dados em valor.
+              Desenvolvedor <span className="text-cyan-400 font-semibold">Automações</span>.
+              Criando soluções inteligentes com <span className="text-cyan-400 font-semibold">N8N, Javascript e Python</span>,
+              para transformar dados em valor.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -238,6 +238,15 @@ const App: React.FC = () => {
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-bold hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-300"
             >
               LinkedIn
+            </a>
+
+            <a
+              href="matheus.dev@outlook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-slate-900/40 border border-white/5 rounded-xl font-bold hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-300"
+            >
+              Email
             </a>
           </div>
         </div>

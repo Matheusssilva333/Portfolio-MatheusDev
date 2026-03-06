@@ -47,16 +47,11 @@ export const SKILLS: Skill[] = [
 export const EXPERIENCE: Experience[] = [
   {
     id: "1",
-    company: "Freelancer",
-    position: "Desenvolvedor de sistemas",
-    period: "2024 - Presente",
-    description: "Desenvolvimento de soluções de IA e automações para clientes diversos. Especialização em machine learning, processamento de dados e integração de APIs de IA.",
-    achievements: [
-      "Desenvolvimento de sistema de IA para consultoria de marketing digital",
-      "Criação de dashboards analíticos para gestão de tráfego",
-      "Implementação de plataforma SaaS para e-commerce",
-      "Automações com Python e integração de APIs",
-    ],
+    company: "Nexus Core AI",
+    position: "Lead Agent Developer",
+    period: "Fevereiro 2026 - Presente",
+    description: "Desenvolvimento de soluções de IA e automações utilizando N8N, Javascript e Python",
+
   },
 ];
 
