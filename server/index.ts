@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 
-import { projects, skills, experience } from "./constants";
+import { projects, skills, experience } from "./constants.js";
 
 const app = express();
 

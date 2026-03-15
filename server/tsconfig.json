@@ -5,6 +5,7 @@
     "module": "NodeNext",
     "target": "ES2022",
     "moduleResolution": "NodeNext",
+    "types": [],
     "noEmit": false
   },
   "include": ["./**/*.ts"]
