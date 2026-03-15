@@ -48,7 +48,7 @@ const App: React.FC = () => {
               learning e aplicações orientadas por dados.
               <br />
               <br />
-              Estou focado em desenvolver
+              Focado em desenvolver
               <span className="text-cyan-400 font-semibold">fluxos completos de ML</span> da preparação de
               dados ao treinamento, avaliação e experimentação com o objetivo de criar
               <span className="text-cyan-400 font-semibold">
