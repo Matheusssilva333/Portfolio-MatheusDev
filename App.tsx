@@ -40,9 +40,9 @@ const App: React.FC = () => {
               <span className="text-slate-400 text-4xl md:text-5xl">Engenharia</span>
             </h1>
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-              👋 Olá, eu sou Matheus Silva
+              👋 Olá,eu sou Matheus Silva
               <span className="text-cyan-400 font-semibold">
-              estudante de Dados e Engenharia de Machine Learning
+                estudante de Dados e Engenharia de Machine Learning
               </span>
                Estudo Análise e Desenvolvimento de Sistemas e tenho uma abordagem centrada em{" "}
               <span className="text-cyan-400 font-semibold">Python</span> para construir sistemas de machine
