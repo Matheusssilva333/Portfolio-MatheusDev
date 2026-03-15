@@ -45,19 +45,19 @@ export const SKILLS: Skill[] = [
   {
     name: "Machine Learning",
     category: "core",
-    proficiency: 88,
+    proficiency: 75,
     details: ["Treinamento e avaliação de modelos", "Validação e tuning de hiperparâmetros", "Seleção de modelos orientada ao negócio"],
   },
   {
     name: "Pipelines de ML & MLOps",
     category: "core",
-    proficiency: 82,
+    proficiency: 70,
     details: ["Orquestração de fluxos de ML fim a fim", "Automação de preparação, treino e inferência", "Estruturação de projetos preparados para produção"],
   },
   {
     name: "N8N (sistemas inteligentes)",
     category: "core",
-    proficiency: 85,
+    proficiency: 70,
     details: ["Orquestração de automações com IA", "Integração de múltiplas APIs e serviços", "Construção de workflows inteligentes low-code"],
   },
   {
@@ -81,7 +81,7 @@ export const SKILLS: Skill[] = [
   {
     name: "Dados & SQL (modelagem e consultas)",
     category: "core",
-    proficiency: 86,
+    proficiency: 70,
     details: ["Modelagem de dados relacionais", "Consultas analíticas e de performance", "Consultas de persistência para aplicações"],
   },
 ];
@@ -89,14 +89,14 @@ export const SKILLS: Skill[] = [
 export const EXPERIENCE: Experience[] = [
   {
     id: "1",
-    company: "Projetos próprios e acadêmicos",
-    position: "Estudante de Dados e Engenharia de Machine Learning",
-    period: "2024 - Presente",
+    company: "Freelancer",
+    position: "Desenvolvedor de Software Freelancer",
+    period: "2025 - Presente",
     description:
-      "Desenvolvendo soluções de machine learning e automação de dados com foco em tornar modelos prontos para produção, unindo Python, pipelines de ML e boas práticas de engenharia.",
+      "Desenvolvendo soluções de automação de dados e sistemas web com foco em tornar modelos prontos para produção, unindo Python, pipelines de ML e boas práticas de engenharia.",
     achievements: [
-      "Construção de fluxos completos de ML: preparação, treinamento, avaliação e experimentação.",
-      "Criação de pipelines de ML automatizados para projetos aplicados de IA.",
+      "Construção de sistemas inteligentes",
+      "Desenvolvimento de sistemas web",
       "Integração de APIs e serviços para compor sistemas inteligentes orientados por dados.",
       "Aplicação de boas práticas de versionamento, documentação e organização de código em projetos de ML.",
     ],
@@ -108,12 +108,12 @@ export const FEEDBACKS: Feedback[] = [
     id: "1",
     description:
       "Manteve a comunicação durante o projeto e entregou conforme solicitado.",
-    imageUrls: [feedback1],
+    imageUrls: [],
   },
   {
     id: "2",
     description:
       "Matheus é um programador e um resolvedor de problemas nato. Em constante aprendizado, busca aprender e aplicar seus conhecimentos em produtos reais.",
-    imageUrls: [feedback2],
+    imageUrls: [],
   },
 ];
