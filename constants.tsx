@@ -107,13 +107,13 @@ export const FEEDBACKS: Feedback[] = [
   {
     id: "1",
     description:
-      "O Matheus demonstra uma combinação rara de visão de negócio com profundidade técnica em Machine Learning e automação.",
-    imageUrls: [],
+      "Manteve a comunicação durante o projeto e entregou conforme solicitado.",
+    imageUrls: [feedback1],
   },
   {
     id: "2",
     description:
-      "Em projetos acadêmicos e pessoais, sempre entrega soluções bem estruturadas e com foco em colocar modelos em produção.",
-    imageUrls: [],
+      "Matheus é um programador e um resolvedor de problemas nato. Em constante aprendizado, busca aprender e aplicar seus conhecimentos em produtos reais.",
+    imageUrls: [feedback2],
   },
 ];

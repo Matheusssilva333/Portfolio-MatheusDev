@@ -37,25 +37,25 @@ const App: React.FC = () => {
                 Machine Learning
               </span>{" "}
               <br />
-              <span className="text-slate-400 text-4xl md:text-5xl">Silva</span>
+              <span className="text-slate-400 text-4xl md:text-5xl">Engenharia</span>
             </h1>
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-              👋 Olá, eu sou Matheus Silva —{" "}
+              👋 Olá, eu sou Matheus Silva
               <span className="text-cyan-400 font-semibold">
-                estudante de Dados e Engenharia de Machine Learning
+              estudante de Dados e Engenharia de Machine Learning
               </span>
-              . Estudo Análise e Desenvolvimento de Sistemas e tenho uma abordagem centrada em{" "}
+               Estudo Análise e Desenvolvimento de Sistemas e tenho uma abordagem centrada em{" "}
               <span className="text-cyan-400 font-semibold">Python</span> para construir sistemas de machine
               learning e aplicações orientadas por dados.
               <br />
               <br />
-              Estou focado em desenvolver{" "}
-              <span className="text-cyan-400 font-semibold">fluxos completos de ML</span> — da preparação de
-              dados ao treinamento, avaliação e experimentação — com o objetivo de criar{" "}
+              Estou focado em desenvolver
+              <span className="text-cyan-400 font-semibold">fluxos completos de ML</span> da preparação de
+              dados ao treinamento, avaliação e experimentação com o objetivo de criar
               <span className="text-cyan-400 font-semibold">
                 soluções de machine learning prontas para produção
               </span>
-              .
+              
             </p>
             <div className="flex flex-wrap gap-4">
               <a

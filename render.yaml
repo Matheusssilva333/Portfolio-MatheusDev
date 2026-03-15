@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: portfolio
+    name: portfolio-frontend
     env: static
-    buildCommand: echo "No build needed"
-    staticPublishPath: .
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
     routes:
       - type: rewrite
         source: /*
