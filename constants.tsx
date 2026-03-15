@@ -36,36 +36,69 @@ export const PROJECTS: Project[] = [
 ];
 
 export const SKILLS: Skill[] = [
-  { name: "Python", category: "core", proficiency: 95 },
-  { name: "Machine Learning", category: "core", proficiency: 85 },
-  { name: "Java", category: "core", proficiency: 80 },
-  { name: "JavaScript", category: "core", proficiency: 75 },
-  { name: "Agentes de IA", category: "core", proficiency: 82 },
-  { name: "Automação de tarefas", category: "core", proficiency: 78 },
+  {
+    name: "Python",
+    category: "core",
+    proficiency: 95,
+    details: ["Processamento e análise de dados", "Automação de scripts e ETLs", "Integração com APIs e serviços"],
+  },
+  {
+    name: "Machine Learning",
+    category: "core",
+    proficiency: 88,
+    details: ["Treinamento e avaliação de modelos", "Validação e tuning de hiperparâmetros", "Seleção de modelos orientada ao negócio"],
+  },
+  {
+    name: "Pipelines de ML & MLOps",
+    category: "core",
+    proficiency: 82,
+    details: ["Orquestração de fluxos de ML fim a fim", "Automação de preparação, treino e inferência", "Estruturação de projetos preparados para produção"],
+  },
+  {
+    name: "N8N (sistemas inteligentes)",
+    category: "core",
+    proficiency: 85,
+    details: ["Orquestração de automações com IA", "Integração de múltiplas APIs e serviços", "Construção de workflows inteligentes low-code"],
+  },
+  {
+    name: "POO (C# e Java)",
+    category: "core",
+    proficiency: 80,
+    details: ["Desenvolvimento de aplicações corporativas", "Modelagem de domínio orientada a objetos", "Organização de código em camadas"],
+  },
+  {
+    name: "JavaScript / HTML / CSS",
+    category: "core",
+    proficiency: 78,
+    details: ["Construção de interfaces web responsivas", "Estruturação e estilização de páginas", "Integração frontend com APIs de backend e ML"],
+  },
+  {
+    name: "Cibersegurança (Pentest, Nmap, SQLmap)",
+    category: "core",
+    proficiency: 70,
+    details: ["Mapeamento e exploração de vulnerabilidades", "Testes de segurança em aplicações web", "Uso de Kali Linux, Nmap, SQLmap e Shodan"],
+  },
+  {
+    name: "Dados & SQL (modelagem e consultas)",
+    category: "core",
+    proficiency: 86,
+    details: ["Modelagem de dados relacionais", "Consultas analíticas e de performance", "Consultas de persistência para aplicações"],
+  },
 ];
 
 export const EXPERIENCE: Experience[] = [
   {
     id: "1",
-    company: "Nexus Core AI",
-    position: "Lead Agent Developer",
-    period: "Fevereiro 2026 - Presente",
-    description: "Desenvolvimento de soluções de IA e automações utilizando N8N, Javascript e Python",
-
+    company: "Projetos próprios e acadêmicos",
+    position: "Estudante de Dados e Engenharia de Machine Learning",
+    period: "2024 - Presente",
+    description:
+      "Desenvolvendo soluções de machine learning e automação de dados com foco em tornar modelos prontos para produção, unindo Python, pipelines de ML e boas práticas de engenharia.",
+    achievements: [
+      "Construção de fluxos completos de ML: preparação, treinamento, avaliação e experimentação.",
+      "Criação de pipelines de ML automatizados para projetos aplicados de IA.",
+      "Integração de APIs e serviços para compor sistemas inteligentes orientados por dados.",
+      "Aplicação de boas práticas de versionamento, documentação e organização de código em projetos de ML.",
+    ],
   },
 ];
-
-
-<div className="p-6 bg-slate-950 border-t border-white/5 space-y-4">
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-    {feedback.imageUrls.map((url, idx) => (
-      <img
-        key={idx}
-        src={url}
-        alt={`Prova social ${idx + 1}`}
-        className="w-full rounded-2xl shadow-lg object-contain max-h-[500px] mx-auto hover:scale-[1.02] transition-transform duration-300 bg-slate-900/40 p-2"
-        loading="lazy"
-      />
-    ))}
-  </div>
-</div>

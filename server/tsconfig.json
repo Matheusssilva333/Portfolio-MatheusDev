@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "../dist-server",
+    "rootDir": ".",
+    "module": "NodeNext",
+    "target": "ES2022",
+    "moduleResolution": "NodeNext",
+    "noEmit": false
+  },
+  "include": ["./**/*.ts"]
+}

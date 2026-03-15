@@ -11,6 +11,7 @@ export interface Skill {
   name: string;
   category: string;
   proficiency: number;
+  details?: string[];
 }
 
 export interface Experience {

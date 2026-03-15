@@ -17,6 +17,7 @@ const App: React.FC = () => {
           </div>
 
           <div className="hidden md:flex gap-10 text-xs font-bold uppercase tracking-widest text-slate-400">
+            <a href="#about" className="hover:text-cyan-400 transition-colors">Sobre mim</a>
             <a href="#projects" className="hover:text-cyan-400 transition-colors">Projetos</a>
             <a href="#experience" className="hover:text-cyan-400 transition-colors">Carreira</a>
             <a href="#feedbacks" className="hover:text-cyan-400 transition-colors">Depoimentos</a>
@@ -32,13 +33,29 @@ const App: React.FC = () => {
           <div className="md:col-span-3">
             <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
               Matheus <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Automações</span> <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
+                Machine Learning
+              </span>{" "}
+              <br />
               <span className="text-slate-400 text-4xl md:text-5xl">Silva</span>
             </h1>
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-              Desenvolvedor <span className="text-cyan-400 font-semibold">Automações</span>.
-              Criando soluções inteligentes com <span className="text-cyan-400 font-semibold">N8N, Javascript e Python</span>,
-              para transformar dados em valor.
+              👋 Olá, eu sou Matheus Silva —{" "}
+              <span className="text-cyan-400 font-semibold">
+                estudante de Dados e Engenharia de Machine Learning
+              </span>
+              . Estudo Análise e Desenvolvimento de Sistemas e tenho uma abordagem centrada em{" "}
+              <span className="text-cyan-400 font-semibold">Python</span> para construir sistemas de machine
+              learning e aplicações orientadas por dados.
+              <br />
+              <br />
+              Estou focado em desenvolver{" "}
+              <span className="text-cyan-400 font-semibold">fluxos completos de ML</span> — da preparação de
+              dados ao treinamento, avaliação e experimentação — com o objetivo de criar{" "}
+              <span className="text-cyan-400 font-semibold">
+                soluções de machine learning prontas para produção
+              </span>
+              .
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -54,6 +71,52 @@ const App: React.FC = () => {
                 Entrar em Contato
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="py-32 px-6 border-t border-white/5">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <h2 className="text-5xl font-black tracking-tighter mb-6">
+              Sobre <span className="text-cyan-500">mim</span>
+            </h2>
+            <p className="text-slate-300 text-lg leading-relaxed mb-6">
+              Estudante de Análise e Desenvolvimento de Sistemas, em transição focada para{" "}
+              <span className="text-cyan-400 font-semibold">Dados e Engenharia de Machine Learning</span>.
+              Minha abordagem é centrada em Python e no desenvolvimento de soluções que conectam
+              modelos de ML com necessidades reais de negócio.
+            </p>
+            <p className="text-slate-400 leading-relaxed">
+              Estou construindo uma base sólida em engenharia de software, dados e cibersegurança,
+              para atuar em projetos de ML que sejam ao mesmo tempo escaláveis, seguros e orientados
+              a resultados concretos.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-sm font-bold uppercase tracking-widest text-cyan-400">
+              Foco atual
+            </h3>
+            <ul className="space-y-2 text-slate-300 text-sm">
+              <li className="flex gap-3">
+                <span className="text-cyan-500 mt-1">▹</span>
+                <span>Fluxos completos de ML: preparação, treinamento, avaliação e monitoramento.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-cyan-500 mt-1">▹</span>
+                <span>Pipelines e automações para colocar modelos em produção.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-cyan-500 mt-1">▹</span>
+                <span>Integração de APIs e serviços em sistemas inteligentes orientados por dados.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-cyan-500 mt-1">▹</span>
+                <span>Aplicação de boas práticas de engenharia de software em projetos de IA.</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -192,7 +255,7 @@ const App: React.FC = () => {
             {SKILLS.map((skill, idx) => (
               <div
                 key={idx}
-                className="bg-slate-900/40 border border-white/5 rounded-2xl p-6 hover:border-cyan-500/30 transition-all duration-300"
+                className="bg-slate-900/40 border border-white/5 rounded-2xl p-6 hover:border-cyan-500/30 transition-all duration-300 flex flex-col gap-4"
               >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold">{skill.name}</h3>
@@ -206,6 +269,16 @@ const App: React.FC = () => {
                     style={{ width: `${skill.proficiency}%` }}
                   />
                 </div>
+                {skill.details && (
+                  <ul className="mt-2 space-y-1 text-xs text-slate-400">
+                    {skill.details.map((item, i) => (
+                      <li key={i} className="flex gap-2">
+                        <span className="text-cyan-500">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
