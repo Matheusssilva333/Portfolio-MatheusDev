@@ -102,3 +102,18 @@ export const EXPERIENCE: Experience[] = [
     ],
   },
 ];
+
+export const FEEDBACKS: Feedback[] = [
+  {
+    id: "1",
+    description:
+      "O Matheus demonstra uma combinação rara de visão de negócio com profundidade técnica em Machine Learning e automação.",
+    imageUrls: [],
+  },
+  {
+    id: "2",
+    description:
+      "Em projetos acadêmicos e pessoais, sempre entrega soluções bem estruturadas e com foco em colocar modelos em produção.",
+    imageUrls: [],
+  },
+];
