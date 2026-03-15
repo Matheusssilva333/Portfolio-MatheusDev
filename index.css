@@ -14,7 +14,7 @@ html, body, #root {
 /* ===== Base ===== */
 body {
   font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
-  background: radial-gradient(circle at 20% 20%, #0f172a, #020617 60%);
+  background: radial-gradient(circle at 20% 20%, #020202a9, #f10909 60%);
   color: #e2e8f0;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -22,13 +22,13 @@ body {
 
 /* ===== Links ===== */
 a {
-  color: #38bdf8;
+  color: #3c0cec;
   text-decoration: none;
   transition: 0.3s ease;
 }
 
 a:hover {
-  color: #22d3ee;
+  color: #21f006;
 }
 
 /* ===== Buttons ===== */
@@ -38,7 +38,7 @@ button {
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  background: linear-gradient(135deg, #0717f8, #06e724);
   color: white;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -46,7 +46,7 @@ button {
 
 button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 10px 25px rgba(4, 80, 243, 0.4);
 }
 
 /* ===== Containers ===== */
@@ -58,16 +58,16 @@ button:hover {
 
 /* ===== Cards ===== */
 .card {
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(227, 228, 231, 0.8);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(2, 2, 2, 0.15);
   border-radius: 16px;
   padding: 2rem;
   transition: 0.3s ease;
 }
 
 .card:hover {
-  border-color: rgba(56, 189, 248, 0.4);
+  border-color: rgba(230, 235, 236, 0.4);
   transform: translateY(-4px);
 }
 
@@ -77,16 +77,16 @@ button:hover {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #313131;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2563eb;
+  background: #2e384e;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0ea5e9;
+  background: #222a2e;
 }
 
 /* ===== Headings ===== */
