@@ -37,7 +37,6 @@ const App: React.FC = () => {
                 Machine Learning
               </span>{" "}
               <br />
-              <span className="text-slate-400 text-4xl md:text-5xl">Engenharia</span>
             </h1>
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
               👋 Olá,eu sou Matheus Silva
