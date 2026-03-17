@@ -39,20 +39,17 @@ const App: React.FC = () => {
               <br />
             </h1>
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-              Olá,eu sou Matheus, estudante de Dados e Engenharia de Machine Learning
+              Olá,eu sou Matheus, estudante de Dados e Engenharia de Machine Learning.
               
                  Estudo Análise e Desenvolvimento de Sistemas e tenho uma abordagem centrada em{" "}
               <span className="text-cyan-400 font-semibold">Python</span> para construir sistemas de machine
               learning e aplicações orientadas por dados.
               <br />
               <br />
-              Focado em desenvolver
-              <span className="text-cyan-400 font-semibold">fluxos completos de ML</span> da preparação de
+              Focado em desenvolver fluxos completos de ML da preparação de
               dados ao treinamento, avaliação e experimentação com o objetivo de criar
-              <span className="text-cyan-400 font-semibold">
-                soluções de machine learning prontas para produção
-              </span>
-              
+                             soluções de machine learning prontas para produção.
+
             </p>
             <div className="flex flex-wrap gap-4">
               <a
