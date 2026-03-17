@@ -39,7 +39,7 @@ const App: React.FC = () => {
               <br />
             </h1>
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-              👋 Olá,eu sou Matheus
+              Olá,eu sou Matheus
               <span className="text-cyan-400 font-semibold">
                 estudante de Dados e Engenharia de Machine Learning
               </span>
