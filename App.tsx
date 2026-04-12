@@ -1,7 +1,28 @@
 import React from "react";
 import { PROJECTS, SKILLS, EXPERIENCE, FEEDBACKS } from "./constants";
 
+// Add animation styles
+const animationStyles = `
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`;
+
 const App: React.FC = () => {
+  React.useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = animationStyles;
+    document.head.appendChild(style);
+    return () => style.remove();
+  }, []);
+
   return (
     <div className="relative min-h-screen selection:bg-cyan-500/30 bg-slate-950 text-white">
       {/* Navigation */}
@@ -209,14 +230,17 @@ const App: React.FC = () => {
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {FEEDBACKS.map((feedback) => (
+            {FEEDBACKS.map((feedback, idx) => (
               <div
                 key={feedback.id}
-                className="bg-slate-900/40 border border-white/5 rounded-3xl overflow-hidden hover:border-cyan-500/30 transition-all duration-300 flex flex-col"
+                className="bg-slate-900/40 border border-white/5 rounded-3xl overflow-hidden hover:border-cyan-500/30 transition-all duration-300 flex flex-col group hover:shadow-lg hover:shadow-cyan-500/10"
+                style={{
+                  animation: `slideUp 0.6s ease-out ${idx * 0.1}s both`
+                }}
               >
                 <div className="p-8 flex-1">
-                  <p className="text-slate-300 leading-relaxed italic text-lg">
-                    “{feedback.description}”
+                  <p className="text-slate-300 leading-relaxed italic text-lg group-hover:text-slate-200 transition-colors">
+                    "{feedback.description}"
                   </p>
                 </div>
 
@@ -308,9 +332,7 @@ const App: React.FC = () => {
             </a>
 
             <a
-              href="matheus.dev@outlook.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:matheus.dev@outlook.com"
               className="px-8 py-4 bg-slate-900/40 border border-white/5 rounded-xl font-bold hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-300"
             >
               Email
