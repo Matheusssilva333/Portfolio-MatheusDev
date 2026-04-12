@@ -221,13 +221,13 @@ const App: React.FC = () => {
                 </div>
 
                 {feedback.imageUrls.length > 0 && (
-                  <div className="grid grid-cols-2 gap-3 p-4 bg-slate-950 border-t border-white/5">
+                  <div className="p-4 bg-slate-950 border-t border-white/5">
                     {feedback.imageUrls.map((url, idx) => (
                       <img
                         key={idx}
                         src={url}
                         alt={`Feedback ${idx + 1}`}
-                        className="w-full h-48 object-cover rounded-2xl shadow-md hover:scale-105 transition-transform duration-300"
+                        className="w-full h-auto object-contain rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-500 grayscale hover:grayscale-0"
                         loading="lazy"
                       />
                     ))}

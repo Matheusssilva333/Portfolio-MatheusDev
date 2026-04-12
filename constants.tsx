@@ -106,14 +106,17 @@ export const EXPERIENCE: Experience[] = [
 export const FEEDBACKS: Feedback[] = [
   {
     id: "1",
-    description:
-      "Manteve a comunicação durante o projeto e entregou conforme solicitado.",
-    imageUrls: [],
+    description: "Profissional atencioso e dedicado.",
+    imageUrls: ["/social-proof/willian.png"],
   },
   {
     id: "2",
-    description:
-      "Matheus é um programador e um resolvedor de problemas nato. Em constante aprendizado, busca aprender e aplicar seus conhecimentos em produtos reais.",
-    imageUrls: [],
+    description: "Matheus é um programador e um resolvedor de problemas nato. Em constante aprendizado, busca aprender e aplicar seus conhecimentos em produtos reais.",
+    imageUrls: ["/social-proof/arthur.png"],
+  },
+  {
+    id: "3",
+    description: "Manteve a comunicação durante o projeto e entregou conforme solicitado.",
+    imageUrls: ["/social-proof/icaro.png"],
   },
 ];
