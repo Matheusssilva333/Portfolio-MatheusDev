@@ -33,6 +33,15 @@ const animationStyles = `
 `;
 
 const App: React.FC = () => {
+  const resumeFilePath = "/Curriculo-Matheus-Silva.pdf";
+  const downloadIcon = (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M12 3v12" />
+      <path d="M7 10l5 5 5-5" />
+      <path d="M4 20h16" />
+    </svg>
+  );
+
   React.useEffect(() => {
     const style = document.createElement('style');
     style.textContent = animationStyles;
@@ -62,6 +71,7 @@ const App: React.FC = () => {
             <a href="#projects" className="hover:text-cyan-400 transition-colors">/PROJETOS</a>
             <a href="#experience" className="hover:text-cyan-400 transition-colors">/CARREIRA</a>
             <a href="#skills" className="hover:text-cyan-400 transition-colors">/STACK</a>
+            <a href={resumeFilePath} download className="inline-flex items-center gap-2 hover:text-cyan-400 transition-colors">/DOWNLOAD_CV {downloadIcon}</a>
             <a href="#contact" className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 rounded-md hover:bg-cyan-500/20 transition-all">CONTRATAR</a>
           </div>
         </div>
@@ -77,7 +87,7 @@ const App: React.FC = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
             </span>
-            Disponível para Estágio • 3º Semestre ADS
+            Disponível para oportunidades como desenvolvedor Python • 3º Semestre ADS
           </div>
           
           <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8 text-white">
@@ -88,7 +98,7 @@ const App: React.FC = () => {
           </h1>
           
           <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl font-light">
-            Sou <span className="text-white font-medium">Matheus Silva</span>, estudante de ADS e Engenheiro de Automação com IA. 
+            Sou <span className="text-white font-medium">Matheus Silva</span>, estudante de ADS e desenvolvedor de Automação com IA. 
             Especializado em criar sistemas autônomos robustos, escaláveis e com foco total em 
             <span className="text-cyan-400"> integridade de dados e segurança operacional</span>.
           </p>
@@ -96,6 +106,9 @@ const App: React.FC = () => {
           <div className="flex flex-wrap gap-4">
             <a href="#projects" className="px-8 py-4 bg-cyan-500 text-slate-950 rounded-lg font-bold hover:bg-cyan-400 transition-all shadow-lg shadow-cyan-500/20">
               Explorar Projetos
+            </a>
+            <a href={resumeFilePath} download className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 border border-cyan-500/30 text-cyan-400 rounded-lg font-bold hover:border-cyan-400 transition-all">
+              {downloadIcon} Download CV (PDF)
             </a>
             <a href="#contact" className="px-8 py-4 bg-slate-900 border border-white/10 rounded-lg font-bold hover:border-cyan-500/50 transition-all">
               Documentação / Contato
@@ -144,7 +157,7 @@ const App: React.FC = () => {
               </div>
               <div className="p-4 bg-white/5 rounded-xl border border-white/5">
                 <h4 className="text-cyan-400 font-bold mb-1">Acadêmico</h4>
-                <p className="text-xs text-slate-500">3º Semestre de ADS - Foco em Backend.</p>
+                <p className="text-xs text-slate-500">3º Semestre de ADS.</p>
               </div>
             </div>
           </div>
@@ -237,10 +250,10 @@ const App: React.FC = () => {
                 DOMÍNIO TÉCNICO
               </h2>
               <p className="text-slate-400 text-lg leading-relaxed mb-8">
-                Focado na construção de sistemas que utilizam <span className="text-white">inteligência artificial de ponta</span> com protocolos de segurança de nível industrial.
+                Focado na construção de sistemas que utilizam <span className="text-white">inteligência artificial de ponta.</span>
               </p>
               <div className="flex flex-wrap gap-3">
-                {['Python', 'MLOps', 'PyTorch', 'FastAPI', 'N8N', 'Docker', 'ADS', 'SQL'].map(tag => (
+                {['Python','N8N','SQL', 'Java', 'Supabase','Inteligência Artificial','Integração de APIs'].map(tag => (
                   <span key={tag} className="px-4 py-2 bg-cyan-500/5 border border-cyan-500/20 text-cyan-400 text-[10px] font-bold rounded-lg uppercase tracking-widest">
                     {tag}
                   </span>
@@ -279,6 +292,9 @@ const App: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <a href="mailto:matheus.dev@outlook.com" className="px-10 py-5 bg-cyan-500 text-slate-950 font-black rounded-xl hover:scale-105 transition-all shadow-xl shadow-cyan-500/20">
               INICIAR CONVERSA
+            </a>
+            <a href={resumeFilePath} download className="inline-flex items-center gap-2 px-10 py-5 bg-slate-900 border border-cyan-500/30 text-cyan-400 font-black rounded-xl hover:scale-105 transition-all">
+              {downloadIcon} DOWNLOAD CV
             </a>
             <div className="flex gap-4">
               <a href="https://github.com/Matheusssilva333" className="p-5 bg-slate-900 border border-white/10 rounded-xl hover:border-cyan-500/50 transition-all text-white">GitHub</a>
