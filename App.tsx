@@ -71,6 +71,7 @@ const App: React.FC = () => {
             <a href="#projects" className="hover:text-cyan-400 transition-colors">/PROJETOS</a>
             <a href="#experience" className="hover:text-cyan-400 transition-colors">/CARREIRA</a>
             <a href="#skills" className="hover:text-cyan-400 transition-colors">/STACK</a>
+            <a href="#feedbacks" className="hover:text-cyan-400 transition-colors">/FEEDBACKS</a>
             <a href={resumeFilePath} download className="inline-flex items-center gap-2 hover:text-cyan-400 transition-colors">/DOWNLOAD_CV {downloadIcon}</a>
             <a href="#contact" className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 rounded-md hover:bg-cyan-500/20 transition-all">CONTRATAR</a>
           </div>
@@ -277,6 +278,48 @@ const App: React.FC = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feedbacks */}
+      <section id="feedbacks" className="py-32 px-6 border-t border-white/5 bg-slate-900/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <h2 className="text-5xl font-black tracking-tighter text-white uppercase">
+              <span className="text-cyan-500 font-mono text-xl block mb-2 opacity-50">// 05. SOCIAL_PROOF</span>
+              FEEDBACKS
+            </h2>
+            <p className="text-slate-500 max-w-sm text-xs font-mono leading-relaxed">
+              [CLIENT_LOG]: DEPOIMENTOS DE PROJETOS REALIZADOS — PRINTS E MENSAGENS DOS CLIENTES.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {FEEDBACKS.map((fb) => (
+              <article
+                key={fb.id}
+                className="group flex flex-col bg-slate-900/40 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/40 transition-all duration-500 hover:-translate-y-1 shadow-xl shadow-black/30"
+              >
+                {fb.imageUrls[0] ? (
+                  <div className="relative aspect-[4/3] bg-slate-950 border-b border-white/5 overflow-hidden">
+                    <img
+                      src={fb.imageUrls[0]}
+                      alt="Depoimento do cliente"
+                      className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
+                  </div>
+                ) : null}
+                <div className="p-8 flex-1 flex flex-col">
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    <span className="text-cyan-500/80 font-serif text-lg leading-none">“</span>
+                    {fb.description}
+                    <span className="text-cyan-500/80 font-serif text-lg leading-none">”</span>
+                  </p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
