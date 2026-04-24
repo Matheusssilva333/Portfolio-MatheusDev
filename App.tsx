@@ -299,6 +299,7 @@ const App: React.FC = () => {
             <div className="flex gap-4">
               <a href="https://github.com/Matheusssilva333" className="p-5 bg-slate-900 border border-white/10 rounded-xl hover:border-cyan-500/50 transition-all text-white">GitHub</a>
               <a href="https://www.linkedin.com/in/matheus-de-souza-0b177b333/" className="p-5 bg-slate-900 border border-white/10 rounded-xl hover:border-cyan-500/50 transition-all text-white">LinkedIn</a>
+              <a href="https://www.instagram.com/matheus___dev/" className="p-5 bg-slate-900 border border-white/10 rounded-xl hover:border-cyan-500/50 transition-all text-white">Instagram</a>
             </div>
           </div>
           
