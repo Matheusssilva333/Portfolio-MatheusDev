@@ -34,6 +34,22 @@ const animationStyles = `
 
 const App: React.FC = () => {
   const resumeFilePath = "/Curriculo-Matheus-Silva.pdf";
+  const [feedbackLightboxSrc, setFeedbackLightboxSrc] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    if (!feedbackLightboxSrc) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setFeedbackLightboxSrc(null);
+    };
+    document.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [feedbackLightboxSrc]);
+
   const downloadIcon = (
     <svg aria-hidden="true" viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2">
       <path d="M12 3v12" />
@@ -305,10 +321,20 @@ const App: React.FC = () => {
                     <img
                       src={fb.imageUrls[0]}
                       alt="Depoimento do cliente"
-                      className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500"
+                      className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500 pointer-events-none select-none"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
+                    <button
+                      type="button"
+                      onClick={() => setFeedbackLightboxSrc(fb.imageUrls[0])}
+                      className="absolute inset-0 z-10 flex items-end justify-end p-3 cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-cyan-400"
+                      aria-label="Ampliar imagem do depoimento"
+                    >
+                      <span className="pointer-events-none rounded-md bg-slate-950/80 border border-cyan-500/30 px-2 py-1 text-[9px] font-mono font-bold uppercase tracking-wider text-cyan-400 opacity-100 transition-opacity md:opacity-0 md:group-hover:opacity-100">
+                        Ampliar
+                      </span>
+                    </button>
                   </div>
                 ) : null}
                 <div className="p-8 flex-1 flex flex-col">
@@ -351,6 +377,40 @@ const App: React.FC = () => {
           </div>
         </div>
       </footer>
+
+      {feedbackLightboxSrc ? (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/95 p-4 md:p-10"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Imagem do depoimento ampliada"
+          onClick={() => setFeedbackLightboxSrc(null)}
+        >
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setFeedbackLightboxSrc(null);
+            }}
+            className="absolute top-4 right-4 z-[110] flex h-11 w-11 items-center justify-center rounded-lg border border-cyan-500/30 bg-slate-900 text-cyan-400 transition-colors hover:bg-cyan-500/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+            aria-label="Fechar visualização ampliada"
+          >
+            <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+          <p className="pointer-events-none absolute bottom-4 left-0 right-0 text-center text-[10px] font-mono text-slate-500 md:bottom-6">
+            Clique fora da imagem ou pressione Esc para fechar
+          </p>
+          <div className="max-h-[85vh] max-w-full" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={feedbackLightboxSrc}
+              alt="Depoimento ampliado"
+              className="max-h-[85vh] max-w-full w-auto rounded-lg border border-white/10 object-contain shadow-2xl shadow-black/50"
+            />
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 };
