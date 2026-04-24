@@ -3,22 +3,14 @@ import { Project, Skill, Experience, Feedback } from "./types";
 export const PROJECTS: Project[] = [
   {
     id: "1",
-    title: "Bot Trader B3 - Scalper Autônomo",
-    description: "Sistema de trading automatizado de alta performance para a B3 (Brasil, Bolsa, Balcão). Implementado em Python, utiliza análise técnica em tempo real, gestão de risco algorítmica e execução de ordens via API com baixa latência.",
-    tags: ["Python", "Fintech", "Algorithmic Trading", "Automation"],
+    title: "Bot de análise de day trade na B3",
+    description: "Bot de análise de day trade na B3 que utiliza análise técnica em tempo real, gestão de risco algorítmica e execução de ordens via API com baixa latência.",
+    tags: ["Python", "Automação com IA", "Machine Learning", "Mercado Financeiro"],
     imageUrl: `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0f172a"/><path d="M20 80 L40 50 L60 70 L80 30" stroke="#06b6d4" stroke-width="3" fill="none"/><circle cx="80" cy="30" r="4" fill="#06b6d4"/><path d="M10 90 L90 90 M10 10 L10 90" stroke="#334155" stroke-width="2"/></svg>`)}`,
-    link: "https://github.com/Matheusssilva333/Bot-Trader.git",
+    link: "https://github.com/Matheusssilva333/Bot-de-analise-de-day-trade-na-B3",
   },
   {
     id: "2",
-    title: "Calculadora Industrial",
-    description: "Calculadora Industrial que além de realizar cálculos básicos, calcula RPM, Potência e Torque.",
-    tags: ["Cálculos", "Industrial", "Javascript"],
-    imageUrl: `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0f172a"/><circle cx="50" cy="50" r="35" stroke="#94a3b8" stroke-width="4" fill="none"/><path d="M50 15 L50 25 M50 75 L50 85 M15 50 L25 50 M75 50 L85 50" stroke="#94a3b8" stroke-width="4"/><path d="M50 50 L70 30" stroke="#ef4444" stroke-width="3" fill="none"/></svg>`)}`,
-    link: "https://github.com/Matheusssilva333/Calculadora-Industrial",
-  },
-  {
-    id: "3",
     title: "IA Consultora de Marketing Digital",
     description: "Agente inteligente construido em Java que utiliza a API do Manus AI para realizar consultoria de marketing digital para crescimento empresarial.",
     tags: ["Java", "IA", "API Manus AI"],
