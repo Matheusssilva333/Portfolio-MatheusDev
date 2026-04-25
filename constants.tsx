@@ -82,7 +82,7 @@ export const IDIOMAS: Idioma[] = [
   {
     name: "Espanhol ",
     category: "Intermediário",
-    proficiency: 90,
+    proficiency: 70,
   },
 
   {
