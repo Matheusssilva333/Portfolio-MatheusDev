@@ -87,20 +87,6 @@ export const EXPERIENCE: Experience[] = [
       "Criação de agentes de IA para consultoria de marketing digital",
       "Otimização de processos reduzindo tempo operacional",
     ],
-  },
- 
-  {
-    id: "2",
-    company: "Talentsy",
-    position: "CoFundador - Diretor de Marketing Digital",
-    period: "2025 - 2025",
-    description:
-      "Atuei como responsável pelo Marketing Digital nas redes sociais selecionando, gerenciando e liderando a equipe da Talentsy. Criei e gerenciei roteiros, vídeos e a equipe da startup.",
-    achievements: [
-      "Liderança e administração",
-      "Empreendedorismo",
-      "Gestão de projetos e marketing digital",
-    ],
   }
 
 
