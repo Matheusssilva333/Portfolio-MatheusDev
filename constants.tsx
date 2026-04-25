@@ -1,4 +1,4 @@
-import { Project, Skill, Experience, Feedback } from "./types";
+import { Project, Skill, Experience, Feedback, Idioma } from "./types";
 
 export const PROJECTS: Project[] = [
   {
