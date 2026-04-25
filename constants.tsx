@@ -72,6 +72,26 @@ export const SKILLS: Skill[] = [
  
 ];
 
+
+export const IDIOMAS: Idioma[] = [
+  {
+    name: "Português",
+    category: "Nativo",
+    proficiency: 100,
+  },
+  {
+    name: "Espanhol ",
+    category: "Intermediário",
+    proficiency: 90,
+  },
+
+  {
+    name: "Inglês",
+    category: "Básico",
+    proficiency: 30,
+  },
+];
+
 export const EXPERIENCE: Experience[] = [
 
 
