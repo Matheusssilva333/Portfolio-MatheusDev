@@ -318,7 +318,7 @@ const App: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
+  </div>
       </section>
 
       {/* Feedbacks */}
