@@ -48,6 +48,27 @@ export const SKILLS: Skill[] = [
     proficiency: 95,
     details: ["Flask", "Programação orientada a objetos"],
   },
+
+  {
+    name: "Java ",
+    category: "Backend",
+    proficiency: 80,
+    details: ["Programação orientada a objetos"],
+  },
+
+  {
+    name: "Banco de Dados",
+    category: "Banco de Dados",
+    proficiency: 90,
+    details: ["SQL", "Supabase"],
+  },
+
+  {
+    name: "HTML, CSS e Javascript",
+    category: "Frontend",
+    proficiency: 80,
+    details: ["HTML", "CSS", "Javascript"],
+  },
  
 ];
 

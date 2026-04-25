@@ -359,7 +359,7 @@ const App: React.FC = () => {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="mailto:matheus.dev@outlook.com" className="px-10 py-5 bg-cyan-500 text-slate-950 font-black rounded-xl hover:scale-105 transition-all shadow-xl shadow-cyan-500/20">
+            <a href="mailto:matheus.dev11@outlook.com" className="px-10 py-5 bg-cyan-500 text-slate-950 font-black rounded-xl hover:scale-105 transition-all shadow-xl shadow-cyan-500/20">
               INICIAR CONVERSA
             </a>
             <a href={resumeFilePath} download className="inline-flex items-center gap-2 px-10 py-5 bg-slate-900 border border-cyan-500/30 text-cyan-400 font-black rounded-xl hover:scale-105 transition-all">
