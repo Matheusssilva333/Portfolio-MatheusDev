@@ -1,5 +1,5 @@
 import React from "react";
-import { PROJECTS, SKILLS, EXPERIENCE, FEEDBACKS } from "./constants";
+import { PROJECTS, SKILLS, EXPERIENCE, FEEDBACKS, IDIOMAS } from "./constants";
 
 // Add animation styles
 const animationStyles = `
@@ -299,27 +299,19 @@ const App: React.FC = () => {
       </section>
 
       
-     
-
-            <div className="space-y-6">
-              {SKILLS.map((skill) => (
-                <div key={skill.name} className="bg-slate-900/40 border border-white/5 p-6 rounded-xl group hover:border-cyan-500/30 transition-all">
+      <div className="space-y-6">
+              {IDIOMAS.map((idioma) => (
+                <div key={idioma.name} className="bg-slate-900/40 border border-white/5 p-6 rounded-xl group hover:border-cyan-500/30 transition-all">
                   <div className="flex justify-between items-end mb-4">
                     <div>
-                      <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">{skill.category}</span>
-                      <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">{skill.name}</h3>
+                      <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">{idioma.category}</span>
+                      <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">{idioma.name}</h3>
                     </div>
-                    <span className="text-cyan-400 font-mono font-bold text-sm">{skill.proficiency}%</span>
-                  </div>
-                  <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-cyan-600 to-blue-500 group-hover:from-cyan-400 group-hover:to-cyan-600 transition-all duration-1000" style={{ width: `${skill.proficiency}%` }} />
+                    <span className="text-cyan-400 font-mono font-bold text-sm">{idioma.proficiency}%</span>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
-  </div>
-      </section>
 
       {/* Feedbacks */}
       <section id="feedbacks" className="py-32 px-6 border-t border-white/5 bg-slate-900/10">
