@@ -87,7 +87,7 @@ export const EXPERIENCE: Experience[] = [
       "Criação de agentes de IA para consultoria de marketing digital",
       "Otimização de processos reduzindo tempo operacional",
     ],
-  }
+  },
  
   {
     id: "2",
