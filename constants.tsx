@@ -57,7 +57,7 @@ export const SKILLS: Skill[] = [
   },
 
   {
-    name: "Banco de Dados",
+    name: "SQL e Supabase",
     category: "Banco de Dados",
     proficiency: 90,
     details: ["SQL", "Supabase"],
@@ -88,9 +88,6 @@ export const EXPERIENCE: Experience[] = [
       "Otimização de processos reduzindo tempo operacional",
     ],
   }
-
-
-   
 ];
 
 export const FEEDBACKS: Feedback[] = [
