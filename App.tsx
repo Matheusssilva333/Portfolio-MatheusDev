@@ -88,7 +88,7 @@ const App: React.FC = () => {
             <a href="#experience" className="hover:text-cyan-400 transition-colors">/CARREIRA</a>
             <a href="#skills" className="hover:text-cyan-400 transition-colors">/STACK</a>
             <a href="#feedbacks" className="hover:text-cyan-400 transition-colors">/FEEDBACKS</a>
-            <a href={resumeFilePath} download className="inline-flex items-center gap-2 hover:text-cyan-400 transition-colors">/DOWNLOAD_CV {downloadIcon}</a>
+            <a href={resumeFilePath} download className="inline-flex items-center gap-2 hover:text-cyan-400 transition-colors">/BAIXAR_PORTFOLIO {downloadIcon}</a>
             <a href="#contact" className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 rounded-md hover:bg-cyan-500/20 transition-all">CONTRATAR</a>
           </div>
         </div>
@@ -104,20 +104,20 @@ const App: React.FC = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
             </span>
-            Disponível para oportunidades como desenvolvedor Python • 3º Semestre ADS
+            Desenvolvedor Python Freelancer • Estudante de ADS em busca de estágio em IA
           </div>
           
           <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8 text-white">
-            SECURE <br />
+            PYTHON & <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
               AI SYSTEMS
             </span>
           </h1>
           
           <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl font-light">
-            Sou <span className="text-white font-medium">Matheus Silva</span>, estudante de ADS e desenvolvedor de Automação com IA. 
-            Especializado em criar sistemas autônomos robustos, escaláveis e com foco total em 
-            <span className="text-cyan-400"> integridade de dados e segurança operacional</span>.
+            Sou <span className="text-white font-medium">Matheus Silva</span>, Desenvolvedor Python Freelancer e estudante de ADS. 
+            Focado em criar soluções inteligentes e automações com IA, busco aplicar meu conhecimento em um 
+            <span className="text-cyan-400"> estágio focado em Inteligência Artificial</span>.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -125,7 +125,7 @@ const App: React.FC = () => {
               Explorar Projetos
             </a>
             <a href={resumeFilePath} download className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 border border-cyan-500/30 text-cyan-400 rounded-lg font-bold hover:border-cyan-400 transition-all">
-              {downloadIcon} Download CV (PDF)
+              {downloadIcon} Baixar Portfólio (PDF)
             </a>
             <a href="#contact" className="px-8 py-4 bg-slate-900 border border-white/10 rounded-lg font-bold hover:border-cyan-500/50 transition-all">
               Documentação / Contato
@@ -148,9 +148,9 @@ const App: React.FC = () => {
               <code className="text-sm font-mono leading-relaxed text-cyan-400/80">
                 <span className="text-purple-400">class</span> <span className="text-yellow-400">Developer</span> {"{"} <br />
                 &nbsp;&nbsp;name = <span className="text-green-400">"Matheus Silva"</span>; <br />
-                &nbsp;&nbsp;role = <span className="text-green-400">"AI Automation Expert"</span>; <br />
-                &nbsp;&nbsp;status = <span className="text-green-400">"Searching for Internship"</span>; <br />
-                &nbsp;&nbsp;skills = [<span className="text-green-400">"Python", "MLOps", "Security"</span>]; <br />
+                &nbsp;&nbsp;role = <span className="text-green-400">"Python Freelancer"</span>; <br />
+                &nbsp;&nbsp;status = <span className="text-green-400">"Looking for AI Internship"</span>; <br />
+                &nbsp;&nbsp;skills = [<span className="text-green-400">"Python", "AI Agents", "Scraping"</span>]; <br />
                 {"}"}
               </code>
             </div>
@@ -163,9 +163,9 @@ const App: React.FC = () => {
             </h2>
             <p className="text-slate-400 text-lg leading-relaxed mb-6">
               Estudante de Análise e Desenvolvimento de Sistemas (3º Semestre), focado em 
-              <span className="text-white font-medium"> Engenharia de Machine Learning</span>. 
-              Atuo como Freelancer desenvolvendo automações que não apenas resolvem problemas, 
-              mas o fazem de forma segura e eficiente.
+              <span className="text-white font-medium"> Inteligência Artificial</span>. 
+              Atuo como Desenvolvedor Python Freelancer, criando automações inteligentes e 
+              sistemas autônomos que resolvem problemas reais de forma escalável.
             </p>
             <div className="grid grid-cols-2 gap-6">
               <div className="p-4 bg-white/5 rounded-xl border border-white/5">
@@ -370,7 +370,7 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <h2 className="text-5xl font-black tracking-tighter mb-8 text-white uppercase">SISTEMA <span className="text-cyan-500">ONLINE</span></h2>
           <p className="text-slate-500 mb-12 max-w-xl mx-auto text-sm">
-            Pronto para integrar IA segura em seu negócio ou oferecer uma oportunidade de estágio para um desenvolvedor focado em alta performance.
+            Pronto para desenvolver soluções robustas em Python ou para contribuir em um time de IA de alta performance como estagiário focado em resultados.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4">
@@ -378,7 +378,7 @@ const App: React.FC = () => {
               INICIAR CONVERSA
             </a>
             <a href={resumeFilePath} download className="inline-flex items-center gap-2 px-10 py-5 bg-slate-900 border border-cyan-500/30 text-cyan-400 font-black rounded-xl hover:scale-105 transition-all">
-              {downloadIcon} DOWNLOAD CV
+              {downloadIcon} BAIXAR PORTFÓLIO
             </a>
             <div className="flex gap-4">
               <a href="https://github.com/Matheusssilva333" className="p-5 bg-slate-900 border border-white/10 rounded-xl hover:border-cyan-500/50 transition-all text-white">GitHub</a>
@@ -388,7 +388,7 @@ const App: React.FC = () => {
           </div>
           
           <div className="mt-20 pt-10 border-t border-white/5 text-[10px] font-mono text-slate-600 uppercase tracking-widest">
-            © 2026 MATHEUS_SILVA // SECURE_AI_DEVELOPER // ADS_ADS_STUDENT
+            © 2026 MATHEUS_SILVA // PYTHON_FREELANCER // AI_INTERNSHIP_SEEKER
           </div>
         </div>
       </footer>

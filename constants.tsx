@@ -98,7 +98,7 @@ export const EXPERIENCE: Experience[] = [
   {
     id: "1",
     company: "Freelance",
-    position: "Desenvolvedor de Automação com IA",
+    position: "Desenvolvedor Python Freelancer",
     period: "2025 - Presente",
     description:
       "Atuando no desenvolvimento de sistemas personalizados para automação de processos e integração de IA.",
