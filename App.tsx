@@ -130,6 +130,15 @@ const App: React.FC = () => {
             <a href="#contact" className="px-8 py-4 bg-slate-900 border border-white/10 rounded-lg font-bold hover:border-cyan-500/50 transition-all">
               Documentação / Contato
             </a>
+            <a
+              href="https://chat.whatsapp.com/B8iH9FETMjw6VMeE4qm3uL"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Networking — profissionais de IA e dados"
+              className="px-8 py-4 bg-slate-900 border border-white/10 rounded-lg font-bold hover:border-cyan-500/50 transition-all text-white"
+            >
+              Comunidade IA e dados
+            </a>
           </div>
         </div>
       </section>
@@ -369,8 +378,19 @@ const App: React.FC = () => {
       <footer id="contact" className="py-20 px-6 border-t border-white/5 bg-slate-950 relative">
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <h2 className="text-5xl font-black tracking-tighter mb-8 text-white uppercase">SISTEMA <span className="text-cyan-500">ONLINE</span></h2>
-          <p className="text-slate-500 mb-12 max-w-xl mx-auto text-sm">
+          <p className="text-slate-500 mb-12 max-w-xl mx-auto text-sm leading-relaxed">
             Pronto para desenvolver soluções robustas em Python ou para contribuir em um time de IA de alta performance como estagiário focado em resultados.
+            {' '}
+            <span className="text-slate-400">Comunidade no WhatsApp para networking entre profissionais de IA e dados:</span>{' '}
+            <a
+              href="https://chat.whatsapp.com/B8iH9FETMjw6VMeE4qm3uL"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cyan-400 font-medium underline decoration-cyan-500/40 underline-offset-4 hover:text-cyan-300"
+            >
+              entrar no grupo
+            </a>
+            .
           </p>
           
           <div className="flex flex-wrap justify-center gap-4">
@@ -380,10 +400,19 @@ const App: React.FC = () => {
             <a href={resumeFilePath} download className="inline-flex items-center gap-2 px-10 py-5 bg-slate-900 border border-cyan-500/30 text-cyan-400 font-black rounded-xl hover:scale-105 transition-all">
               {downloadIcon} BAIXAR PORTFÓLIO
             </a>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <a href="https://github.com/Matheusssilva333" className="p-5 bg-slate-900 border border-white/10 rounded-xl hover:border-cyan-500/50 transition-all text-white">GitHub</a>
               <a href="https://www.linkedin.com/in/matheus-de-souza-0b177b333/" className="p-5 bg-slate-900 border border-white/10 rounded-xl hover:border-cyan-500/50 transition-all text-white">LinkedIn</a>
               <a href="https://www.instagram.com/matheus___dev/" className="p-5 bg-slate-900 border border-white/10 rounded-xl hover:border-cyan-500/50 transition-all text-white">Instagram</a>
+              <a
+                href="https://chat.whatsapp.com/B8iH9FETMjw6VMeE4qm3uL"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-5 bg-slate-900 border border-white/10 rounded-xl hover:border-cyan-500/50 transition-all text-white"
+                title="Comunidade de networking — profissionais de IA e dados"
+              >
+                Comunidade IA e dados
+              </a>
             </div>
           </div>
           
