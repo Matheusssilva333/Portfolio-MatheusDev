@@ -227,7 +227,12 @@ const App: React.FC = () => {
             {PROJECTS.map((project) => (
               <div key={project.id} className="group glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row h-full">
                 <div className="w-full md:w-1/2 aspect-video md:aspect-auto relative overflow-hidden bg-slate-950">
-                  <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" />
+                  <img 
+                    src={project.imageUrl} 
+                    alt={`Interface do projeto ${project.title} - Especialista em Automação com IA`} 
+                    className="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" 
+                    loading="lazy"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-r from-slate-950 to-transparent" />
                 </div>
                 
@@ -403,11 +408,16 @@ const App: React.FC = () => {
           </h2>
           
           <div className="flex flex-wrap justify-center gap-6 mb-24">
-            <a href="mailto:matheus.dev11@outlook.com" className="px-12 py-6 bg-white text-slate-950 font-black rounded-2xl hover:scale-105 transition-all text-sm uppercase tracking-widest shadow-2xl">
+            <a 
+              href="https://wa.me/5513974034128?text=Olá%20Matheus,%20vi%20seu%20portfólio%20e%20gostaria%20de%20iniciar%20uma%20conversa%20sobre%20automação%20com%20IA." 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-12 py-6 bg-cyan-500 text-slate-950 font-black rounded-2xl hover:scale-105 hover:bg-cyan-400 transition-all text-sm uppercase tracking-widest shadow-[0_0_30px_rgba(6,182,212,0.5)]"
+            >
               INICIAR_PROCESSO
             </a>
-            <a href="https://www.linkedin.com/in/matheus-de-souza-0b177b333/" className="px-12 py-6 bg-slate-900 border border-white/10 text-white font-black rounded-2xl hover:border-cyan-500/50 transition-all text-sm uppercase tracking-widest">
-              LINKEDIN_CONNECT
+            <a href="mailto:matheus.dev11@outlook.com" className="px-12 py-6 bg-slate-900 border border-white/10 text-white font-black rounded-2xl hover:border-cyan-500/50 transition-all text-sm uppercase tracking-widest">
+              ENVIAR_EMAIL
             </a>
           </div>
 
