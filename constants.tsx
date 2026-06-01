@@ -1,16 +1,9 @@
 import { Project, Skill, Experience, Education, Feedback, Idioma } from "./types";
 
 export const PROJECTS: Project[] = [
+ 
   {
     id: "1",
-    title: "Bot de Análise Day Trade B3",
-    description: "Desenvolvimento de um motor algorítmico para análise técnica em tempo real. Implementação de gestão de risco automatizada que reduziu o tempo de execução de ordens em 85%, integrando APIs do mercado financeiro com Python.",
-    tags: ["Python", "Automação", "Machine Learning", "Finanças"],
-    imageUrl: "https://images.unsplash.com/photo-1611974717483-9b250aa06d93?auto=format&fit=crop&q=80&w=800",
-    link: "https://github.com/Matheusssilva333/Bot-de-analise-de-day-trade-na-B3",
-  },
-  {
-    id: "2",
     title: "IA Consultora de Marketing Digital",
     description: "Agente inteligente construído em Java que automatiza o funil de vendas. Utiliza a API do Manus AI para gerar estratégias personalizadas, resultando em um aumento de 40% na eficiência de prospecção durante os testes beta.",
     tags: ["Java", "IA Generativa", "API Manus AI", "Marketing"],
@@ -18,7 +11,7 @@ export const PROJECTS: Project[] = [
     link: "https://github.com/Matheusssilva333/IA-de-Consultoria-de-Marketing-Digital",
   },
   {
-    id: "4",
+    id: "2",
     title: "Plataforma de Streaming FullStack",
     description: "Ecossistema completo de vídeo construído com JavaScript moderno. Focado em performance de carregamento e experiência do usuário, implementando arquitetura escalável para distribuição de conteúdo.",
     tags: ["JavaScript", "FullStack", "Streaming", "UX"],
@@ -26,7 +19,7 @@ export const PROJECTS: Project[] = [
     link: "https://github.com/Matheusssilva333/Projeto-de-Streaming",
   },
   {
-    id: "5",
+    id: "3",
     title: "Calculadora de Preços Imobiliários",
     description: "Sistema de predição de preços que utiliza regressão linear e machine learning em Python. Analisa mais de 15 variáveis de mercado para entregar estimativas com margem de erro inferior a 10%.",
     tags: ["Python", "Machine Learning", "Data Science", "Real Estate"],
