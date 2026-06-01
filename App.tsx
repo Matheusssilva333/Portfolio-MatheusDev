@@ -369,27 +369,34 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Social Proof / Feedbacks */}
-      <section className="py-40 px-6">
+      {/* Social Proof / Feedbacks - Print Driven */}
+      <section id="feedbacks" className="py-40 px-6 bg-slate-900/10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-24">
             <h2 className="text-5xl font-black tracking-tighter uppercase section-title mb-4">Validation_Log</h2>
-            <p className="text-slate-500 font-mono text-xs uppercase tracking-widest">Feedback de Clientes e Parceiros</p>
+            <p className="text-slate-500 font-mono text-xs uppercase tracking-widest">Prints de Depoimentos Reais</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {FEEDBACKS.map((fb) => (
-              <div key={fb.id} className="glass-card p-10 rounded-3xl relative">
-                <div className="absolute top-6 right-8 text-cyan-500 opacity-20 text-6xl font-serif">“</div>
-                <p className="text-slate-300 text-base leading-relaxed mb-8 relative z-10 italic">
-                  {fb.description}
-                </p>
-                <div className="flex items-center gap-4">
-                  {fb.imageUrls[0] && (
-                    <div className="w-10 h-10 rounded-full overflow-hidden border border-cyan-500/30">
-                      <img src={fb.imageUrls[0]} alt="Feedback user" className="w-full h-full object-cover" />
+              <div key={fb.id} className="group flex flex-col glass-card rounded-3xl overflow-hidden hover:border-cyan-500/50 transition-all duration-500">
+                {fb.imageUrls[0] && (
+                  <div className="relative aspect-[4/3] overflow-hidden cursor-zoom-in" onClick={() => setFeedbackLightboxSrc(fb.imageUrls[0])}>
+                    <img 
+                      src={fb.imageUrls[0]} 
+                      alt="Print do Feedback" 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                    <div className="absolute bottom-4 left-6 right-6">
+                      <span className="text-[10px] font-mono text-cyan-400 font-bold uppercase tracking-widest bg-slate-950/80 px-2 py-1 rounded">Clique_Para_Ampliar</span>
                     </div>
-                  )}
-                  <div className="h-px flex-1 bg-white/5"></div>
+                  </div>
+                )}
+                <div className="p-8">
+                  <p className="text-slate-400 text-sm italic leading-relaxed">
+                    "{fb.description}"
+                  </p>
                 </div>
               </div>
             ))}
@@ -416,7 +423,14 @@ const App: React.FC = () => {
             >
               INICIAR_PROCESSO
             </a>
-            <a href="mailto:matheus.dev11@outlook.com" className="px-12 py-6 bg-slate-900 border border-white/10 text-white font-black rounded-2xl hover:border-cyan-500/50 transition-all text-sm uppercase tracking-widest">
+            <a 
+              href="mailto:matheus.dev11@outlook.com"
+              className="px-12 py-6 bg-slate-900 border border-white/10 text-white font-black rounded-2xl hover:border-cyan-500/50 transition-all text-sm uppercase tracking-widest"
+              onClick={(e) => {
+                // Prevenção extra para garantir o comportamento mailto
+                window.location.href = "mailto:matheus.dev11@outlook.com";
+              }}
+            >
               ENVIAR_EMAIL
             </a>
           </div>
@@ -430,10 +444,22 @@ const App: React.FC = () => {
         </div>
       </footer>
 
-      {/* Lightbox logic preserved */}
+      {/* Lightbox: Enhanced for Prints */}
       {feedbackLightboxSrc && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-6 backdrop-blur-xl" onClick={() => setFeedbackLightboxSrc(null)}>
-          <img src={feedbackLightboxSrc} className="max-h-full max-w-full rounded-2xl shadow-2xl border border-white/10" alt="Enlarged feedback" />
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/98 p-4 md:p-10 backdrop-blur-2xl animate-in fade-in duration-300" onClick={() => setFeedbackLightboxSrc(null)}>
+           <div className="relative max-h-full max-w-5xl">
+              <button 
+                className="absolute -top-12 right-0 text-white font-mono text-xs uppercase tracking-widest hover:text-cyan-400"
+                onClick={() => setFeedbackLightboxSrc(null)}
+              >
+                [FECHAR_X]
+              </button>
+              <img 
+                src={feedbackLightboxSrc} 
+                className="rounded-xl shadow-2xl border border-white/10 object-contain max-h-[80vh]" 
+                alt="Enlarged feedback print" 
+              />
+           </div>
         </div>
       )}
 

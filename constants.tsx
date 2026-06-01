@@ -1,7 +1,7 @@
 import { Project, Skill, Experience, Education, Feedback, Idioma } from "./types";
 
 export const PROJECTS: Project[] = [
- 
+  
   {
     id: "1",
     title: "IA Consultora de Marketing Digital",
@@ -121,10 +121,10 @@ export const EXPERIENCE: Experience[] = [
   {
     id: "1",
     company: "Setor Industrial",
-    position: "Soldador Especialista",
+    position: "Soldador",
     period: "2026 - Presente",
     description: "Aplicação de rigor técnico e normas de segurança em ambientes de alta pressão.",
-    achievements: ["Zero falhas em testes de integridade", "Liderança de equipe operacional"],
+    achievements: ["Zero falhas em testes de integridade", "Otimização de processos de soldagem reduzindo retrabalho em 30%"],
   },
   {
     id: "2",
@@ -151,18 +151,17 @@ export const EXPERIENCE: Experience[] = [
 export const FEEDBACKS: Feedback[] = [
   {
     id: "1",
-    description: "O Matheus demonstrou um nível de atenção aos detalhes impressionante. Entregou a automação antes do prazo e superou nossas expectativas de eficiência.",
+    description: "Profissional atencioso e dedicado.",
     imageUrls: ["/social-proof/willian.png"],
-    // Adicionando contexto que o App.tsx pode usar
   },
   {
     id: "2",
-    description: "Programador nato. A forma como ele integrou o Python com nossos dados de mercado foi brilhante. Um profissional que realmente entende de produto.",
+    description: "Matheus é um programador e resolvedor de problemas nato. Em constante aprendizado, busca aprender e aplicar seus conhecimentos em produtos reais.",
     imageUrls: ["/social-proof/arthur.png"],
   },
   {
     id: "3",
-    description: "Comunicação clara e transparente durante todo o projeto. A plataforma de streaming ficou extremamente rápida e fluida.",
+    description: "Manteve a comunicação durante o projeto e entregou conforme solicitado.",
     imageUrls: ["/social-proof/icaro.png"],
   },
 ];
