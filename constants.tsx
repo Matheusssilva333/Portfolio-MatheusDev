@@ -1,16 +1,9 @@
-import { Project, Skill, Experience, Feedback, Idioma } from "./types";
+import { Project, Skill, Experience, Education, Feedback, Idioma } from "./types";
 
 export const PROJECTS: Project[] = [
+  
   {
     id: "1",
-    title: "Bot de análise de day trade na B3",
-    description: "Bot de análise de day trade na B3 que utiliza análise técnica em tempo real, gestão de risco algorítmica e execução de ordens via API com baixa latência.",
-    tags: ["Python", "Automação com IA", "Machine Learning", "Mercado Financeiro"],
-    imageUrl: `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0f172a"/><path d="M20 80 L40 50 L60 70 L80 30" stroke="#06b6d4" stroke-width="3" fill="none"/><circle cx="80" cy="30" r="4" fill="#06b6d4"/><path d="M10 90 L90 90 M10 10 L10 90" stroke="#334155" stroke-width="2"/></svg>`)}`,
-    link: "https://github.com/Matheusssilva333/Bot-de-analise-de-day-trade-na-B3",
-  },
-  {
-    id: "2",
     title: "IA Consultora de Marketing Digital",
     description: "Agente inteligente construido em Java que utiliza a API do Manus AI para realizar consultoria de marketing digital para crescimento empresarial.",
     tags: ["Java", "IA", "API Manus AI"],
@@ -18,7 +11,7 @@ export const PROJECTS: Project[] = [
     link: "https://github.com/Matheusssilva333/IA-de-Consultoria-de-Marketing-Digital",
   },
   {
-    id: "4",
+    id: "2",
     title: "Plataforma de Streaming",
     description: "Plataforma de streaming construida em Javascript com interface web básica.",
     tags: ["Javascript", "Streaming", "FullStack"],
@@ -26,7 +19,7 @@ export const PROJECTS: Project[] = [
     link: "https://github.com/Matheusssilva333/Projeto-de-Streaming",
   },
   {
-    id: "5",
+    id: "3",
     title: "Calculadora de Preços de Imóveis",
     description: "Calculadora de preços de imóveis construida em Python com algoritmos de machine learning para estimar o preço de um imóvel com base em variáveis como localização, metragem e infraestrutura.",
     tags: ["Python", "Machine Learning", "FullStack"],
@@ -37,41 +30,74 @@ export const PROJECTS: Project[] = [
 
 export const SKILLS: Skill[] = [
   {
-    name: "Automações Inteligentes",
-    category: "Automation",
+    name: "Automação com IA",
+    category: "AI & Automation",
     proficiency: 90,
-    details: ["Fluxos Complexos em N8N", "Agentes Autônomos de IA"],
+    details: ["n8n", "Make", "Gemini CLI", "Antigravity"],
   },
   {
-    name: "Python ",
-    category: "Backend e automações",
-    proficiency: 95,
-    details: ["Flask", "Programação orientada a objetos"],
-  },
-
-  {
-    name: "Java ",
+    name: "Python",
     category: "Backend",
-    proficiency: 80,
-    details: ["Programação orientada a objetos"],
+    proficiency: 85,
+    details: ["Automações", "Básico de Python"],
   },
-
   {
-    name: "SQL e Supabase",
-    category: "Banco de Dados",
+    name: "SQL & Supabase",
+    category: "Database",
     proficiency: 90,
-    details: ["SQL", "Supabase"],
+    details: ["PostgreSQL", "Supabase", "Excel"],
   },
-
   {
-    name: "HTML, CSS e Javascript",
-    category: "Frontend",
-    proficiency: 80,
-    details: ["HTML", "CSS", "Javascript"],
+    name: "Java Foundations",
+    category: "Backend",
+    proficiency: 75,
+    details: ["Oracle Java Foundations", "SENAI"],
   },
- 
+  {
+    name: "Manutenção Industrial",
+    category: "Hard Skills",
+    proficiency: 95,
+    details: ["Mecânica Industrial", "Soldagem"],
+  },
 ];
 
+export const EDUCATION: Education[] = [
+  {
+    id: "1",
+    institution: "Unisanta",
+    degree: "Análise e Desenvolvimento de Sistemas",
+    period: "2025 - 2026",
+    description: "Foco em desenvolvimento de software e arquitetura de sistemas.",
+  },
+  {
+    id: "2",
+    institution: "SENAI Cubatão",
+    degree: "Dev. de Aplicações com IA Generativa (Google Antigravity)",
+    period: "2026",
+    description: "Especialização em orquestração de agentes e automação com LLMs.",
+  },
+  {
+    id: "3",
+    institution: "SENAI Cubatão",
+    degree: "Programação Oracle Java Foundations",
+    period: "2025",
+    description: "Fundamentos de programação orientada a objetos.",
+  },
+  {
+    id: "5",
+    institution: "Programa Autonomia e Renda Petrobras",
+    degree: "Caldeiraria",
+    period: "2025 - 2025",
+    description: "Formação técnica em traçagem, corte e conformação de metais pelo programa da Petrobras.",
+  },
+  {
+    id: "4",
+    institution: "SENAI Cubatão",
+    degree: "Técnico em Manutenção de Máquinas Industriais",
+    period: "2023 - 2024",
+    description: "Formação técnica em processos industriais e mecânica.",
+  },
+];
 
 export const IDIOMAS: Idioma[] = [
   {
@@ -80,11 +106,10 @@ export const IDIOMAS: Idioma[] = [
     proficiency: 100,
   },
   {
-    name: "Espanhol ",
+    name: "Espanhol",
     category: "Intermediário",
     proficiency: 70,
   },
-
   {
     name: "Inglês",
     category: "Básico",
@@ -93,20 +118,33 @@ export const IDIOMAS: Idioma[] = [
 ];
 
 export const EXPERIENCE: Experience[] = [
-
-
   {
     id: "1",
+    company: "Soldador",
+    position: "Soldador",
+    period: "2026 - Emprego atual",
+    description: "Atuação profissional no setor industrial.",
+    achievements: ["Precisão técnica e conformidade com normas de segurança."],
+  },
+  {
+    id: "2",
     company: "Freelance",
-    position: "Desenvolvedor Python Freelancer",
-    period: "2025 - Presente",
-    description:
-      "Atuando no desenvolvimento de sistemas personalizados para automação de processos e integração de IA.",
+    position: "Desenvolvedor Freelancer",
+    period: "2025 - 2026",
+    description: "Desenvolvimento de soluções de automação e integração de sistemas.",
     achievements: [
-      "Implementação de bots autônomos para automação de processos",
-      "Criação de agentes de IA para consultoria de marketing digital",
-      "Otimização de processos reduzindo tempo operacional",
+      "Implementação de fluxos no n8n e Make",
+      "Criação de bots em Python para automação de tarefas",
+      "Consultoria em automação de processos com IA"
     ],
+  },
+  {
+    id: "3",
+    company: "Franciscon Infraestrutura",
+    position: "Jovem Aprendiz",
+    period: "2023 - 2024",
+    description: "Primeira experiência profissional em infraestrutura.",
+    achievements: ["Apoio operacional e administrativo."],
   }
 ];
 
@@ -121,7 +159,6 @@ export const FEEDBACKS: Feedback[] = [
     description: "Matheus é um programador e resolvedor de problemas nato. Em constante aprendizado, busca aprender e aplicar seus conhecimentos em produtos reais.",
     imageUrls: ["/social-proof/arthur.png"],
   },
-
   {
     id: "3",
     description: "Manteve a comunicação durante o projeto e entregou conforme solicitado.",

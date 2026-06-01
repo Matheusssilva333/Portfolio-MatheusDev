@@ -1,16 +1,18 @@
 
 import { GoogleGenAI } from "@google/genai";
+import { Message } from "../types";
 
-const API_KEY = process.env.API_KEY;
+// Vite uses import.meta.env for environment variables
+const API_KEY = (import.meta as any).env?.VITE_GEMINI_API_KEY || "";
 
 export class GeminiAssistant {
   private ai: GoogleGenAI;
   
   constructor() {
-    this.ai = new GoogleGenAI({ apiKey: API_KEY || "" });
+    this.ai = new GoogleGenAI({ apiKey: API_KEY });
   }
 
-  async chat(message: string, history: { role: 'user' | 'assistant', content: string }[]) {
+  async chat(message: string, history: Message[]) {
     try {
       const response = await this.ai.models.generateContent({
         model: 'gemini-3-flash-preview',
