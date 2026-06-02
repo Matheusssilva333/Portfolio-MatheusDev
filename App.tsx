@@ -151,7 +151,7 @@ const App: React.FC = () => {
           </p>
 
           <div className="flex flex-wrap gap-6">
-            <a href="#projects" className="px-10 py-5 bg-cyan-500 text-slate-950 rounded-xl font-black text-sm uppercase tracking-widest hover:bg-cyan-400 transition-all shadow-[0_20px_40px_rgba(6,182,212,0.2)]">
+            <a href="#projetos" className="px-10 py-5 bg-cyan-500 text-slate-950 rounded-xl font-black text-sm uppercase tracking-widest hover:bg-cyan-400 transition-all shadow-[0_20px_40px_rgba(6,182,212,0.2)]">
               Ver_Sistemas
             </a>
             <a href="#contact" className="px-10 py-5 bg-slate-900 border border-white/10 rounded-xl font-black text-sm uppercase tracking-widest hover:border-cyan-500/50 transition-all">
@@ -426,10 +426,6 @@ const App: React.FC = () => {
             <a 
               href="mailto:matheus.dev11@outlook.com"
               className="px-12 py-6 bg-slate-900 border border-white/10 text-white font-black rounded-2xl hover:border-cyan-500/50 transition-all text-sm uppercase tracking-widest"
-              onClick={(e) => {
-                // Prevenção extra para garantir o comportamento mailto
-                window.location.href = "mailto:matheus.dev11@outlook.com";
-              }}
             >
               ENVIAR_EMAIL
             </a>
