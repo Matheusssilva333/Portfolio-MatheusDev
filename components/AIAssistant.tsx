@@ -12,16 +12,22 @@ const AIAssistant: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  const SUGGESTIONS = [
+    "Quais são seus principais projetos?",
+    "Como você usa IA na automação?",
+    "Como posso te contratar?",
+  ];
+
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
   }, [messages]);
 
-  const handleSend = async () => {
-    if (!input.trim() || isLoading) return;
+  const handleSend = async (overrideText?: string) => {
+    const userMsg = overrideText || input.trim();
+    if (!userMsg || isLoading) return;
 
-    const userMsg = input.trim();
     setInput('');
     setMessages(prev => [...prev, { role: 'user', content: userMsg }]);
     setIsLoading(true);
@@ -39,7 +45,7 @@ const AIAssistant: React.FC = () => {
           <div className="p-4 bg-blue-600 flex justify-between items-center text-white">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="font-bold text-sm">Neural Assistant</span>
+              <span className="font-bold text-sm">NEXUS-M1 Interface</span>
             </div>
             <button onClick={() => setIsOpen(false)} className="hover:bg-blue-700 p-1 rounded">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
@@ -69,7 +75,20 @@ const AIAssistant: React.FC = () => {
             )}
           </div>
 
-          <div className="p-4 border-t border-slate-800 bg-slate-900">
+          <div className="p-4 border-t border-slate-800 bg-slate-900 space-y-4">
+            {messages.length === 1 && (
+              <div className="flex flex-wrap gap-2">
+                {SUGGESTIONS.map((suggestion) => (
+                  <button
+                    key={suggestion}
+                    onClick={() => handleSend(suggestion)}
+                    className="text-[10px] bg-slate-800 hover:bg-slate-700 text-blue-400 border border-blue-500/20 px-2 py-1 rounded-md transition-colors"
+                  >
+                    {suggestion}
+                  </button>
+                ))}
+              </div>
+            )}
             <div className="flex gap-2">
               <input
                 type="text"
