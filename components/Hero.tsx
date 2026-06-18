@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
         </h1>
         
         <p className="text-slate-400 text-xl md:text-2xl leading-relaxed mb-12 max-w-3xl font-light">
-          De <span className="text-white font-medium">Caldeireiro na Petrobras</span> a <span className="text-emerald-400 font-medium">Hacker Ético</span>. Fundindo a disciplina industrial com a agilidade do desenvolvimento e a precisão da cibersegurança.
+          De <span className="text-white font-medium">Caldeireiro prestador na Petrobras</span> a <span className="text-emerald-400 font-medium">Hacker Ético</span>. Fundindo a disciplina industrial com a agilidade do desenvolvimento e a precisão da cibersegurança.
         </p>
 
         <div className="flex flex-wrap gap-6">
