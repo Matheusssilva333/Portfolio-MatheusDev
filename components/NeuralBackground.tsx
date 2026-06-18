@@ -37,8 +37,8 @@ const NeuralBackground: React.FC = () => {
 
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = 'rgba(59, 130, 246, 0.5)';
-      ctx.strokeStyle = 'rgba(59, 130, 246, 0.1)';
+      ctx.fillStyle = 'rgba(6, 182, 212, 0.4)'; // Cyan
+      ctx.strokeStyle = 'rgba(16, 185, 129, 0.1)'; // Emerald
 
       particles.forEach((p, i) => {
         p.x += p.vx;

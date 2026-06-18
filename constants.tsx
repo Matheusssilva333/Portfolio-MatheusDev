@@ -1,7 +1,7 @@
 import { Project, Skill, Experience, Education, Feedback, Idioma } from "./types";
 
 export const PROJECTS: Project[] = [
-  
+
   {
     id: "1",
     title: "IA Consultora de Marketing Digital",
@@ -26,6 +26,14 @@ export const PROJECTS: Project[] = [
     imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
     link: "https://github.com/Matheusssilva333/Calculadora-de-precos-de-imoveis",
   },
+  {
+    id: "4",
+    title: "Análise de tráfego de rede - Wireshark",
+    description: "Análise de tráfego de rede capturado pelo Wireshark, identificando padrões de comunicação, protocolos utilizados e potenciais vulnerabilidades.",
+    tags: ["Wireshark", "Análise de Tráfego", "Redes", "Protocolos", "Segurança"],
+    imageUrl: "https://images.unsplash.com/photo-1526374965328-486d8d87f723?auto=format&fit=crop&q=80&w=800",
+    link: "https://github.com/Matheusssilva333/Analise-de-trafego-de-rede-Wireshark.git",
+  },
 ];
 
 export const SKILLS: Skill[] = [
@@ -36,22 +44,28 @@ export const SKILLS: Skill[] = [
     details: ["n8n", "Make (Integromat)", "LangChain", "Agentes Autônomos"],
   },
   {
+    name: "Cibersegurança & Ethical Hacking",
+    category: "Security",
+    proficiency: 70,
+    details: ["Wireshark", "Nmap", "Burp Suite", "Postman", "Metasploit"],
+  },
+  {
     name: "Desenvolvimento Python",
     category: "Backend",
     proficiency: 90,
     details: ["FastAPI", "Pandas", "Automação de Scripts", "Bots"],
   },
   {
+    name: "Desenvolvimento Java",
+    category: "Backend",
+    proficiency: 80,
+    details: ["Oracle Java Foundations", "Spring Boot", "POO", "Estrutura de Dados"],
+  },
+  {
     name: "Engenharia de Dados",
     category: "Database",
     proficiency: 85,
     details: ["PostgreSQL", "Supabase", "SQL Avançado", "Excel Pro"],
-  },
-  {
-    name: "Desenvolvimento Java",
-    category: "Backend",
-    proficiency: 75,
-    details: ["Oracle Java Foundations", "POO", "Estrutura de Dados"],
   },
   {
     name: "Precisão Industrial",
@@ -113,29 +127,31 @@ export const IDIOMAS: Idioma[] = [
   {
     name: "Inglês",
     category: "Técnico",
-    proficiency: 40,
+    proficiency: 55,
   },
 ];
 
 export const EXPERIENCE: Experience[] = [
   {
     id: "1",
-    company: "Setor Industrial",
-    position: "Soldador",
+    company: "C3 Engenharia (Petrobras - RPBC)",
+    position: "Caldeireiro - Setor UGAV",
     period: "2026 - Presente",
-    description: "Aplicação de rigor técnico e normas de segurança em ambientes de alta pressão.",
-    achievements: ["Zero falhas em testes de integridade", "Otimização de processos de soldagem reduzindo retrabalho em 30%"],
+    description: "Atuação em parada de manutenção na Refinaria Presidente Bernardes (Cubatão). Execução de manutenção corretiva e preventiva em unidades de geração de ar e vapor (UGAV), aplicando precisão técnica em conformação de metais e montagem industrial sob rigorosos protocolos de segurança.",
+    achievements: ["Zero falhas em testes de integridade em ambiente crítico", "Aplicação de metodologias ágeis na organização de fluxos de manutenção"],
   },
   {
     id: "2",
     company: "Freelance Tech",
-    position: "Desenvolvedor de Automações",
-    period: "2025 - 2026",
-    description: "Consultoria e implementação de soluções que unem IA e produtividade.",
+    position: "FullStack Developer & Ethical Hacker",
+    period: "2024 - Presente",
+    description: "2 anos de experiência entregando soluções robustas de automação e segurança ofensiva/defensiva.",
     achievements: [
-      "Desenvolvimento de bots de atendimento via WhatsApp",
-      "Integração de CRMs com n8n reduzindo trabalho manual em 60%",
-      "Criação de dashboards inteligentes no Supabase"
+      "Desenvolvimento de bots de atendimento e fluxos de automação com Python e Java",
+      "Pentesting e análise de vulnerabilidades em aplicações web utilizando Burp Suite e Nmap",
+      "Monitoramento e análise de tráfego de rede com Wireshark para identificação de intrusões",
+      "Implementação de APIs seguras e integração de sistemas legados",
+      "Consultoria técnica para otimização de segurança digital em pequenas empresas"
     ],
   },
   {
@@ -143,7 +159,7 @@ export const EXPERIENCE: Experience[] = [
     company: "Franciscon Infraestrutura",
     position: "Jovem Aprendiz Técnico",
     period: "2023 - 2024",
-    description: "Início da trajetória profissional com foco em suporte operacional e logística.",
+    description: "Início da trajetória profissional com foco em suporte operacional e logística industrial.",
     achievements: ["Otimização da organização de ativos industriais"],
   }
 ];
