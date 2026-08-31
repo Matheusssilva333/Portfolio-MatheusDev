@@ -11,11 +11,11 @@ const companyIcons: Record<string, string> = {
 };
 
 const positionColors: Record<string, { dot: string; line: string; badge: string; badgeText: string }> = {
-  "Auxiliar técnico de Planejamento de Manutenção Industrial — UT2": {
+  "Apoio ao Planejamento e SMS / Auxiliar de Manutenção — UT2": {
     dot: "bg-orange-400 shadow-[0_0_20px_#fb923c]",
     line: "from-orange-500/50 to-orange-500/10",
     badge: "badge-planning",
-    badgeText: "Promoção por Mérito",
+    badgeText: "Planejamento & SMS",
   },
   "Caldeireiro Industrial — UGAV / Oficina de Fabricação": {
     dot: "bg-amber-400 shadow-[0_0_15px_#fbbf24]",
