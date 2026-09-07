@@ -4,6 +4,7 @@ import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Education from "@/components/Education";
+import WorkArticles from "@/components/WorkArticles";
 import Footer from "@/components/Footer";
 import { EXPERIENCE, SKILLS, PROJECTS, EDUCATION, IDIOMAS } from "@/constants";
 
@@ -13,7 +14,11 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <About />
-        {/* Adicionando as outras seções gradualmente conforme as refatoramos */}
+        <Experience experiences={EXPERIENCE} />
+        <WorkArticles />
+        <Projects projects={PROJECTS} />
+        <Skills skills={SKILLS} />
+        <Education education={EDUCATION} idiomas={IDIOMAS} />
       </main>
       <Footer />
     </div>
