@@ -8,13 +8,13 @@ const Hero: React.FC = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden px-6 pb-28 pt-36 md:pb-36 md:pt-48">
+    <section className="hero-section relative overflow-hidden px-6 pb-28 pt-36 md:pb-36 md:pt-48">
       <div className="pointer-events-none absolute -left-32 top-24 h-96 w-96 rounded-full bg-orange-500/10 blur-[130px]" />
       <div className="pointer-events-none absolute right-0 top-10 h-[520px] w-[520px] rounded-full bg-slate-500/5 blur-[120px]" />
 
       <div className="section-shell">
         <div className="grid items-end gap-14 lg:grid-cols-[1.25fr_.75fr]">
-          <div>
+          <div className="relative z-10">
             <div className="badge-industrial mb-8 inline-flex items-center gap-3 rounded-full px-4 py-2 text-[10px] font-black uppercase tracking-[.24em]">
               <span className="h-1.5 w-1.5 rounded-full bg-orange-400 shadow-[0_0_12px_rgba(251,146,60,.9)]" />
               Planejamento de Manutenção Industrial
@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          <aside className="glass-morphism relative overflow-hidden rounded-3xl p-6 md:p-7">
+          <aside className="glass-morphism hero-profile-card relative overflow-hidden rounded-3xl p-6 md:p-7">
             <div className="absolute right-0 top-0 h-24 w-24 bg-orange-500/10 blur-3xl" />
             <div className="mb-8 flex items-center justify-between border-b border-white/10 pb-5">
               <div>

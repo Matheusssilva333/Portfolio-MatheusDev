@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ resumeFilePath }) => {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-6 md:pt-5">
-      <nav className="nav-blur mx-auto max-w-7xl rounded-2xl border border-white/10 shadow-2xl shadow-black/20">
+      <nav className="nav-blur nav-frame mx-auto max-w-7xl rounded-2xl border border-white/10 shadow-2xl shadow-black/20">
         <div className="flex h-[68px] items-center justify-between px-4 md:px-6">
           <a href="#top" className="group flex items-center gap-3" aria-label="Voltar ao início">
             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-500 text-xs font-black tracking-tight text-slate-950 shadow-lg shadow-orange-500/10 transition-transform group-hover:-rotate-3">MS</span>
