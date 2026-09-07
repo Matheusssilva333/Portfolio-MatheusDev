@@ -16,6 +16,7 @@ const Header: React.FC<HeaderProps> = ({ resumeFilePath }) => {
   const navLinks = [
     { href: "#sobre", label: "Sobre" },
     { href: "#carreira", label: "Trajetória" },
+    { href: "#trabalho", label: "Trabalho & Artigos" },
     { href: "#projetos", label: "Projetos" },
     { href: "#stack", label: "Competências" },
     { href: "#formacao", label: "Formação" },
@@ -24,8 +25,6 @@ const Header: React.FC<HeaderProps> = ({ resumeFilePath }) => {
   return (
     <nav className="fixed top-0 w-full z-50 nav-blur border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-
-        {/* Logo */}
         <div className="flex items-center gap-4 group cursor-pointer">
           <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center font-mono font-black text-black shadow-2xl group-hover:rotate-12 transition-transform duration-500 text-sm">
             MS
@@ -33,13 +32,12 @@ const Header: React.FC<HeaderProps> = ({ resumeFilePath }) => {
           <div>
             <div className="font-black text-base tracking-tight leading-none text-white">MATHEUS SILVA</div>
             <div className="text-[10px] font-mono text-orange-400 font-bold uppercase tracking-widest opacity-80">
-              Planejamento Industrial & Tech
+              Planejamento Industrial
             </div>
           </div>
         </div>
 
-        {/* Navigation */}
-        <div className="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500">
+        <div className="hidden lg:flex items-center gap-7 text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500">
           {navLinks.map((link) => (
             <a key={link.href} href={link.href} className="hover:text-white transition-colors relative group">
               {link.label}
