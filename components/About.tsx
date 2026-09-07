@@ -1,47 +1,36 @@
 import React from "react";
 
-const About: React.FC = () => {
-  const journey = [
-    { step: "01", role: "Aprendiz Industrial SENAI", company: "Franciscon Infraestrutura", period: "2023 – 2024", description: "Base técnica industrial, disciplina profissional e primeiros contatos com processos de manutenção e fabricação.", color: "from-slate-500/20 to-slate-600/10", borderColor: "border-slate-500/30", dotColor: "bg-slate-400" },
-    { step: "02", role: "Caldeireiro Industrial — UGAV / Oficina", company: "C3 Engenharia & Soluções / Petrobras RPBC", period: "2026", description: "Experiência de campo em parada de manutenção, caldeiraria, fabricação e execução de atividades em ambiente de refinaria.", color: "from-orange-500/15 to-orange-600/5", borderColor: "border-orange-500/25", dotColor: "bg-orange-400" },
-    { step: "03", role: "Assistente de Planejamento — UT2", company: "C3 Engenharia & Soluções / Petrobras RPBC", period: "2026", description: "Atuação no apoio ao planejamento de manutenção e SMS, com controle de atividades, PTs e interface com as frentes de campo.", color: "from-orange-500/20 to-amber-500/10", borderColor: "border-orange-400/40", dotColor: "bg-orange-400", current: false },
-  ];
+const journey = [
+  ["01", "2023 — 2024", "Aprendiz Industrial SENAI", "Franciscon Infraestrutura", "Base técnica industrial, disciplina profissional e primeiros contatos com manutenção e fabricação."],
+  ["02", "2026", "Caldeireiro Industrial", "C3 Engenharia & Soluções · Petrobras RPBC", "Experiência de campo em caldeiraria, fabricação e execução durante manutenção em refinaria."],
+  ["03", "2026", "Assistente de Planejamento", "C3 Engenharia & Soluções · Petrobras RPBC", "Apoio ao planejamento de manutenção e SMS, controle de atividades, PTs e interface com campo."],
+];
 
-  return (
-    <section id="sobre" className="py-40 px-6 relative">
-      <div className="absolute inset-0 pointer-events-none overflow-hidden"><div className="absolute right-0 top-1/4 w-[500px] h-[500px] rounded-full bg-orange-500/3 blur-[120px]" /></div>
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="mb-20">
-          <span className="text-primary-gradient text-sm font-mono font-bold uppercase tracking-[0.4em] block mb-4">// SOBRE MIM</span>
-          <h2 className="text-5xl md:text-6xl font-black tracking-tighter section-title mb-6">Da experiência de campo<br /><span className="text-primary-gradient">ao planejamento industrial</span></h2>
-          <div className="h-px w-24 bg-gradient-to-r from-orange-500 to-transparent mb-8" />
-          <p className="text-slate-400 text-lg leading-relaxed max-w-4xl">Minha trajetória começou na execução industrial e avançou para o planejamento de manutenção. Hoje, meu foco profissional está em aprofundar conhecimentos de planejamento, tubulações e sistemas industriais, usando tecnologia como ferramenta de apoio — não como substituta da especialização industrial.</p>
-        </div>
+const pillars = [
+  ["01", "Planejamento", "Sequenciamento, recursos, restrições, interfaces e controle de execução."],
+  ["02", "Sistemas industriais", "Desenvolvimento técnico em tubulações, equipamentos e manutenção."],
+  ["03", "Tecnologia", "Programação, dados e IA como ferramentas para organizar e automatizar informação."],
+];
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
-          <div className="relative group"><div className="absolute -inset-1 bg-gradient-to-r from-orange-500/30 to-amber-600/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition duration-1000" /><div className="relative bg-[#0a0d1a] border border-orange-500/10 p-10 rounded-3xl overflow-hidden">
-            <div className="flex items-center gap-2 mb-6 pb-4 border-b border-white/5"><div className="w-3 h-3 rounded-full bg-red-500/70" /><div className="w-3 h-3 rounded-full bg-yellow-500/70" /><div className="w-3 h-3 rounded-full bg-green-500/70" /><span className="ml-4 text-slate-600 font-mono text-xs">matheus_silva.profile</span></div>
-            <div className="space-y-4 font-mono text-sm"><div className="flex items-center gap-2 text-orange-400"><span className="text-slate-600">01</span><span className="text-purple-400">struct</span> Profile {'{'}</div><div className="pl-8 text-slate-300 space-y-2">
-              <div><span className="text-slate-500">foco: </span><span className="text-green-400">"Planejamento de Manutenção Industrial"</span></div>
-              <div><span className="text-slate-500">especializacao: </span><span className="text-green-400">["Tubulações", "Sistemas Industriais"]</span></div>
-              <div><span className="text-slate-500">base_pratica: </span><span className="text-yellow-400">["Caldeiraria", "Manutenção", "Refinaria"]</span></div>
-              <div><span className="text-slate-500">formacao: </span><span className="text-yellow-400">["ADS", "SENAI"]</span></div>
-              <div><span className="text-slate-500">tecnologia: </span><span className="text-yellow-400">["Python", "Java", "IA Generativa"]</span></div>
-              <div><span className="text-slate-500">objetivo: </span><span className="text-orange-400">"Especialização em sistemas industriais"</span></div>
-            </div><div className="text-orange-400">{'}'}</div><div className="pt-4 border-t border-white/5"><div className="flex items-center gap-2 text-slate-500"><span className="text-orange-400">▶</span><span>status:</span><span className="text-green-400 animate-pulse">em_desenvolvimento</span></div></div></div>
-          </div></div>
-
-          <div className="space-y-8">
-            <div className="p-6 rounded-2xl stat-card"><h3 className="text-white font-bold text-lg mb-3">Planejamento como eixo profissional</h3><p className="text-slate-400 text-sm leading-relaxed">A experiência em campo é a base para interpretar restrições reais de execução, sequenciamento, recursos, segurança e interfaces de manutenção.</p></div>
-            <div className="p-6 rounded-2xl stat-card"><h3 className="text-white font-bold text-lg mb-3">Tubulações e sistemas industriais</h3><p className="text-slate-400 text-sm leading-relaxed">O próximo ciclo de desenvolvimento é aprofundar conhecimentos técnicos de tubulação, equipamentos, manutenção e funcionamento dos sistemas industriais.</p></div>
-            <div className="p-6 rounded-2xl stat-card"><h3 className="text-white font-bold text-lg mb-3">Tecnologia como competência complementar</h3><p className="text-slate-400 text-sm leading-relaxed">ADS, programação, automação de dados e IA ampliam minha capacidade de organizar informação e construir ferramentas para problemas concretos.</p></div>
-          </div>
-        </div>
-
-        <div><h3 className="text-2xl font-black tracking-tighter text-white mb-10 flex items-center gap-4"><div className="h-px flex-1 bg-gradient-to-r from-transparent to-orange-500/20" />Linha do Tempo<div className="h-px flex-1 bg-gradient-to-l from-transparent to-orange-500/20" /></h3><div className="grid md:grid-cols-3 gap-6">{journey.map((item) => <div key={item.step} className={`relative p-6 rounded-2xl border bg-gradient-to-br ${item.color} ${item.borderColor} transition-all duration-500 hover:-translate-y-2`}><div className="text-5xl font-black text-white/5 font-mono mb-4">{item.step}</div><div className={`w-3 h-3 rounded-full ${item.dotColor} mb-4 shadow-lg`} /><div className="text-[10px] font-mono text-slate-500 uppercase tracking-wider mb-2">{item.period}</div><h4 className="text-white font-black text-base leading-tight mb-2">{item.role}</h4><p className="text-slate-500 text-[10px] font-bold uppercase tracking-wide mb-4">{item.company}</p><p className="text-slate-400 text-xs leading-relaxed">{item.description}</p></div>)}</div></div>
+const About: React.FC = () => (
+  <section id="sobre" className="relative py-28 md:py-36">
+    <div className="section-shell">
+      <div className="grid lg:grid-cols-[.8fr_1.2fr] gap-12 lg:gap-24 items-end">
+        <div><span className="section-kicker">Sobre / trajetória</span><h2 className="section-title">Experiência de campo que evolui para <span className="text-primary-gradient">planejamento.</span></h2></div>
+        <p className="section-copy mt-0">Minha trajetória profissional parte da execução industrial e avança para o planejamento de manutenção. O objetivo é construir profundidade técnica em tubulações e sistemas industriais, mantendo tecnologia como competência complementar.</p>
       </div>
-    </section>
-  );
-};
 
-export default React.memo(About);
+      <div className="mt-16 grid lg:grid-cols-12 gap-5">
+        <div className="lg:col-span-7 glass-morphism rounded-3xl p-7 md:p-9 hover-lift">
+          <div className="flex items-center justify-between border-b border-white/10 pb-5 mb-7"><span className="eyebrow">perfil profissional</span><span className="font-mono text-[10px] text-emerald-400">● EM DESENVOLVIMENTO</span></div>
+          <div className="font-mono text-sm leading-8"><div className="text-orange-400">profile <span className="text-slate-500">=</span> {'{'}</div><div className="pl-5 md:pl-8 space-y-1 text-slate-300"><div><span className="text-slate-500">eixo</span>: <span className="text-white">"Planejamento de Manutenção Industrial"</span>,</div><div><span className="text-slate-500">especialização</span>: <span className="text-orange-300">["Tubulações", "Sistemas Industriais"]</span>,</div><div><span className="text-slate-500">base</span>: <span className="text-amber-300">["Caldeiraria", "Manutenção", "Refinaria"]</span>,</div><div><span className="text-slate-500">formação</span>: <span className="text-amber-300">["ADS", "SENAI"]</span>,</div><div><span className="text-slate-500">tecnologia</span>: <span className="text-sky-300">["Python", "Java", "IA Generativa"]</span></div></div><div className="text-orange-400">{'}'}</div></div>
+        </div>
+        <div className="lg:col-span-5 grid gap-4">{pillars.map(([n,title,text]) => <div key={n} className="glass-morphism rounded-2xl p-6 hover-lift"><div className="flex gap-4"><span className="font-mono text-xs text-orange-400">{n}</span><div><h3 className="font-bold text-white">{title}</h3><p className="mt-2 text-sm leading-6 text-slate-400">{text}</p></div></div></div>)}</div>
+      </div>
+
+      <div className="mt-24"><div className="flex items-center gap-5 mb-8"><span className="section-kicker">Evolução</span><div className="section-divider flex-1" /></div><div className="grid md:grid-cols-3 gap-px bg-white/10 rounded-3xl overflow-hidden border border-white/10">{journey.map(([n,period,role,company,text]) => <article key={n} className="bg-[#08121b] p-7 md:p-8 hover:bg-[#0c1923] transition-colors"><div className="flex justify-between items-start"><span className="font-mono text-4xl font-bold text-white/10">{n}</span><span className="font-mono text-[10px] text-orange-400">{period}</span></div><h3 className="mt-10 text-lg font-extrabold text-white">{role}</h3><p className="mt-2 text-[10px] font-bold uppercase tracking-[.16em] text-slate-500">{company}</p><p className="mt-5 text-sm leading-7 text-slate-400">{text}</p></article>)}</div></div>
+    </div>
+  </section>
+);
+
+export default About;
