@@ -6,8 +6,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Matheus Silva | Atalaia Industrial & Software Engineer",
-  description: "Especialista em Planejamento Industrial e Desenvolvedor de Software unindo engenharia e tecnologia.",
+  title: "Matheus Silva | Planejamento Industrial",
+  description: "Portfólio profissional de Matheus Silva: planejamento de manutenção, tubulações, sistemas industriais, trajetória de campo e artigos técnicos.",
 };
 
 export default function RootLayout({
@@ -18,12 +18,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${inter.className} industrial-grid min-h-screen antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>
