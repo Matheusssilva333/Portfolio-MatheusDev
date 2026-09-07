@@ -1,61 +1,19 @@
 "use client";
-
 import React, { useState } from "react";
 import { Skill } from "../types";
 
-interface SkillsProps { skills: Skill[]; }
+const META: Record<string,{label:string;color:string}> = { Industrial:{label:"Industrial",color:"text-orange-400"}, Planning:{label:"Planejamento",color:"text-emerald-400"}, Tech:{label:"Tecnologia",color:"text-sky-400"} };
+const tags = ["Manutenção Industrial","Caldeiraria","Planejamento","Tubulações","Permissão de Trabalho","Segurança Industrial","Python","Java","IA Generativa","Automação","Processos Industriais"];
 
-const CATEGORY_META: Record<string, { label: string; icon: string; color: string; barColor: string }> = {
-  Industrial: { label: "Competências Industriais", icon: "⚙", color: "text-orange-400", barColor: "from-orange-500 to-amber-500" },
-  Planning: { label: "Planejamento & Gestão", icon: "📋", color: "text-green-400", barColor: "from-green-500 to-emerald-400" },
-  Tech: { label: "Tecnologia & Desenvolvimento", icon: "💻", color: "text-indigo-400", barColor: "from-indigo-500 to-violet-400" },
+const Skills: React.FC<{skills:Skill[]}> = ({skills}) => {
+ const [active,setActive]=useState("Industrial");
+ const list=skills.filter(s=>s.category===active);
+ return <section id="stack" className="relative py-28 md:py-36"><div className="section-shell">
+  <div className="grid lg:grid-cols-[.8fr_1.2fr] gap-10 items-end"><div><span className="section-kicker">Competências</span><h2 className="section-title">Conhecimento organizado por <span className="text-primary-gradient">domínio.</span></h2></div><p className="section-copy mt-0">Uma combinação deliberada de base industrial, planejamento e competências tecnológicas complementares.</p></div>
+  <div className="mt-14 grid lg:grid-cols-12 gap-5">
+   <div className="lg:col-span-7 glass-morphism rounded-3xl p-7 md:p-9"><div className="flex flex-wrap gap-2 mb-10">{Object.keys(META).map(k=><button key={k} onClick={()=>setActive(k)} className={`px-4 py-2.5 rounded-lg border text-[10px] font-bold uppercase tracking-[.16em] transition-all ${active===k?'border-orange-500/40 bg-orange-500/10 text-orange-300':'border-white/5 text-slate-500 hover:text-slate-300'}`}>{META[k].label}</button>)}</div><div className="space-y-7">{list.map(s=><div key={s.name}><div className="flex justify-between mb-2"><span className={`text-xs font-bold uppercase tracking-wider ${META[s.category].color}`}>{s.name}</span><span className="font-mono text-xs text-slate-400">{s.proficiency}%</span></div><div className="h-1 bg-white/5 rounded-full overflow-hidden"><div className="h-full bg-gradient-to-r from-orange-500 to-amber-300 rounded-full" style={{width:`${s.proficiency}%`}}/></div>{s.details&&<div className="flex flex-wrap gap-2 mt-3">{s.details.map(d=><span key={d} className="font-mono text-[9px] text-slate-500 border border-white/5 rounded px-2 py-1">{d}</span>)}</div>}</div>)}</div></div>
+   <div className="lg:col-span-5 glass-morphism rounded-3xl p-7 md:p-9"><span className="section-kicker">Domínios</span><h3 className="mt-4 text-2xl font-black text-white">Stack de conhecimento</h3><div className="flex flex-wrap gap-2 mt-7">{tags.map(t=><span key={t} className="rounded-lg border border-white/8 bg-white/[.025] px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-slate-400 hover:border-orange-500/30 hover:text-orange-300 transition-colors">{t}</span>)}</div><div className="mt-10 pt-7 border-t border-white/10"><p className="eyebrow">Diferencial</p><p className="mt-3 text-sm leading-7 text-slate-300">A combinação mais relevante não é quantidade de ferramentas, mas a capacidade de conectar <span className="text-white font-semibold">execução industrial → planejamento → informação</span>.</p></div></div>
+  </div>
+ </div></section>
 };
-
-const Skills: React.FC<SkillsProps> = ({ skills }) => {
-  const [activeCategory, setActiveCategory] = useState("Industrial");
-  const categories = Object.keys(CATEGORY_META);
-  const filteredSkills = skills.filter((s) => s.category === activeCategory);
-  const techTags = ["Python", "Java", "React", "IA Generativa", "Manutenção Industrial", "Caldeiraria", "Planejamento", "Permissão de Trabalho", "Segurança Industrial", "Automação", "Processos Industriais", "Machine Learning"];
-
-  return (
-    <section id="stack" className="py-40 px-6 relative">
-      <div className="absolute right-0 top-1/3 w-[400px] h-[400px] rounded-full bg-indigo-500/3 blur-[100px] pointer-events-none" />
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="mb-16">
-          <span className="text-primary-gradient text-sm font-mono font-bold uppercase tracking-[0.4em] block mb-4">// COMPETÊNCIAS</span>
-          <h2 className="text-5xl md:text-6xl font-black tracking-tighter section-title mb-6">Arsenal<br /><span className="text-primary-gradient">Profissional</span></h2>
-          <div className="h-px w-24 bg-gradient-to-r from-orange-500 to-transparent" />
-        </div>
-        <div className="grid lg:grid-cols-2 gap-20">
-          <div>
-            <div className="flex flex-wrap gap-3 mb-10">
-              {categories.map((cat) => {
-                const meta = CATEGORY_META[cat];
-                const isActive = activeCategory === cat;
-                return <button key={cat} onClick={() => setActiveCategory(cat)} aria-pressed={isActive} className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 border ${isActive ? "bg-orange-500/10 border-orange-500/40 text-orange-400" : "bg-transparent border-white/5 text-slate-500 hover:border-white/10 hover:text-slate-400"}`}><span>{meta.icon}</span>{meta.label}</button>;
-              })}
-            </div>
-            <div className="space-y-8">
-              {filteredSkills.map((skill) => {
-                const meta = CATEGORY_META[skill.category];
-                return <div key={skill.name} className="group"><div className="flex justify-between items-center mb-3"><h3 className={`text-sm font-bold uppercase tracking-wider ${meta.color}`}>{skill.name}</h3><span className={`font-mono font-bold text-xs ${meta.color}`}>{skill.proficiency}%</span></div><div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden"><div className={`h-full bg-gradient-to-r ${meta.barColor} rounded-full skill-bar-fill`} style={{ width: `${skill.proficiency}%` }} /></div>{skill.details && <div className="flex flex-wrap gap-2 mt-3">{skill.details.map((d) => <span key={d} className="text-[9px] px-2 py-0.5 rounded-md font-mono font-bold uppercase tracking-wide text-slate-500 border border-white/5">{d}</span>)}</div>}</div>;
-              })}
-            </div>
-          </div>
-          <div>
-            <h3 className="text-xl font-black text-white mb-8 tracking-tight"><span className="text-primary-gradient">Domínios</span> de Atuação</h3>
-            <div className="flex flex-wrap gap-3 mb-12">{techTags.map((tag) => <span key={tag} className="industrial-tag px-4 py-2 text-[10px] font-bold rounded-xl uppercase tracking-widest cursor-default">{tag}</span>)}</div>
-            <div className="space-y-4"><h3 className="text-lg font-black text-white tracking-tight mb-6">Diferenciais Competitivos</h3>{[
-              { icon: "🏭", title: "Experiência Real de Campo", desc: "Vivência em ambiente industrial, conectando execução e planejamento." },
-              { icon: "📋", title: "Visão de Planejamento", desc: "Controle, organização e suporte à execução em ambientes complexos." },
-              { icon: "🔗", title: "Interface Campo–Processo", desc: "Capacidade de traduzir necessidades da execução em informação de planejamento." },
-              { icon: "🤖", title: "Tecnologia Complementar", desc: "Automação, dados e IA aplicados como ferramentas de produtividade." },
-            ].map((d) => <div key={d.title} className="flex items-start gap-4 p-4 rounded-xl stat-card"><span className="text-2xl flex-shrink-0">{d.icon}</span><div><h4 className="text-white font-bold text-sm mb-1">{d.title}</h4><p className="text-slate-500 text-xs leading-relaxed">{d.desc}</p></div></div>)}</div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
 export default React.memo(Skills);
