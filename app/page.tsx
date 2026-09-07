@@ -10,9 +10,10 @@ import { EXPERIENCE, SKILLS, PROJECTS, EDUCATION, IDIOMAS } from "@/constants";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div id="top" className="flex min-h-screen flex-col">
       <main className="flex-grow">
         <Hero />
+        <div className="section-divider" />
         <About />
         <Experience experiences={EXPERIENCE} />
         <WorkArticles />
